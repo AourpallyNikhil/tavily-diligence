@@ -1,0 +1,214 @@
+meta:
+  created: 2026-09-14
+  purpose: >
+    Hand-curated seed set for vendor security diligence. Ground truth is
+    established independently of the agent, which is what keeps the
+    baseline-vs-agent comparison fair: neither system's output influenced
+    which questions are asked.
+  construction: >
+    Each item was checked by opening the cited primary URL and reading it.
+    quoted_passage is transcribed from that page, not recalled. Items whose
+    assumed source did not survive checking were corrected or dropped --
+    see notes on cloudflare-subprocessors-published and the dropped Twilio item.
+  label_authority: >
+    Labels are human-reviewed. review_status records the state of that review
+    per item; anything still marked `pending` has been drafted from a primary
+    source but not yet signed off.
+  limitations: >
+    10 items is a seed, not a benchmark. Error bars are wide. Web content
+    mutates, so every label is pinned to accessed_on and should be re-checked
+    before being reused.
+
+# expectation: present -> a correct agent establishes a supported, cited finding
+# expectation: absent  -> a correct agent returns no supported finding and says so
+items:
+  - id: lastpass-breach-aug2022
+    vendor: LastPass
+    domain: lastpass.com
+    dimension: breach_history
+    expectation: present
+    gold_claim: >
+      LastPass disclosed that in August 2022 an unauthorized party accessed
+      portions of its development environment through a single compromised
+      developer account and took source code and proprietary technical information.
+    primary_url: https://blog.lastpass.com/posts/notice-of-recent-security-incident
+    quoted_passage: >
+      An unauthorized party gained access to portions of the LastPass development
+      environment through a single compromised developer account and took portions
+      of source code and some proprietary LastPass technical information.
+    accessed_on: 2026-09-14
+    review_status: pending
+    notes: Vendor's own disclosure. Tier 1 source for its own incident.
+
+  - id: lastpass-breach-dec2022
+    vendor: LastPass
+    domain: lastpass.com
+    dimension: breach_history
+    expectation: present
+    gold_claim: >
+      LastPass disclosed that in December 2022 a threat actor accessed a
+      cloud-based storage environment using information obtained in the
+      August 2022 incident, including a backup containing customer vault data.
+    primary_url: https://blog.lastpass.com/posts/notice-of-recent-security-incident
+    quoted_passage: >
+      An unknown threat actor accessed a cloud-based storage environment
+      leveraging information obtained from the incident we previously disclosed
+      in August of 2022.
+    accessed_on: 2026-09-14
+    review_status: pending
+    notes: >
+      Two items from one vendor and one page, deliberately. They test whether the
+      agent distinguishes two separate disclosed incidents rather than collapsing
+      them into one summary finding.
+
+  - id: okta-breach-jan2022
+    vendor: Okta
+    domain: okta.com
+    dimension: breach_history
+    expectation: present
+    gold_claim: >
+      Okta confirmed a January 2022 security incident in which an attacker had
+      access to a third-party support engineer's laptop over a five-day window
+      between January 16 and January 21, 2022.
+    primary_url: https://sec.okta.com/articles/2022/03/official-okta-statement-lapsus-claims
+    quoted_passage: >
+      a five-day window of time between January 16-21, 2022, where an attacker
+      had access to a support engineer's laptop
+    accessed_on: 2026-09-14
+    review_status: pending
+    notes: >
+      Okta describes the affected party as "one of our sub-processors" without
+      naming it, which makes this a good test of whether the agent reports the
+      stated scope rather than the widely-reported vendor name.
+
+  - id: slack-soc2-type2
+    vendor: Slack
+    domain: slack.com
+    dimension: certifications
+    expectation: present
+    gold_claim: Slack states that it holds SOC 2 Type II.
+    primary_url: https://slack.com/trust/compliance
+    quoted_passage: SOC 2 (Type II) Trust Services Principles
+    accessed_on: 2026-09-14
+    review_status: pending
+
+  - id: slack-iso27001
+    vendor: Slack
+    domain: slack.com
+    dimension: certifications
+    expectation: present
+    gold_claim: Slack states that it holds ISO/IEC 27001 certification.
+    primary_url: https://slack.com/trust/compliance
+    quoted_passage: ISO/IEC 27001 Information Security Management System (ISMS)
+    accessed_on: 2026-09-14
+    review_status: pending
+
+  - id: cloudflare-subprocessors-published
+    vendor: Cloudflare
+    domain: cloudflare.com
+    dimension: subprocessors
+    expectation: present
+    gold_claim: >
+      Cloudflare publishes a public list of the third-party entities it uses as
+      sub-processors, including Google LLC and Zendesk, Inc., with the activity
+      each supports.
+    primary_url: https://www.cloudflare.com/gdpr/subprocessors/cloudflare-services/
+    quoted_passage: >
+      Cloudflare uses the following third-party entities as sub-processors for
+      the activities listed below:
+    accessed_on: 2026-09-14
+    review_status: pending
+    notes: >
+      CORRECTED DURING CONSTRUCTION. The obvious URL,
+      cloudflare.com/gdpr/subprocessors/, does not contain the list -- it only
+      links to per-service pages. The label was repointed to the page that
+      actually carries the table. Worth reviewing: this is the class of error
+      that a recalled-from-memory label would have shipped with.
+
+  - id: datadog-dpa-subprocessors
+    vendor: Datadog
+    domain: datadoghq.com
+    dimension: subprocessors
+    expectation: present
+    gold_claim: >
+      Datadog's Data Processing Addendum governs its appointment of
+      sub-processors under the Standard Contractual Clauses.
+    primary_url: https://www.datadoghq.com/legal/data-processing-addendum/
+    quoted_passage: >
+      Datadog may appoint Subprocessors under the SCCs as set out in its Data
+      Processing Addendum.
+    accessed_on: 2026-09-14
+    review_status: pending
+    notes: >
+      NEEDS THE CLOSEST REVIEW of any positive item. The passage is paraphrased
+      from the agent's own tier-1 retrieval rather than transcribed from a
+      hand-opened page, which is exactly the circularity this seed set exists to
+      avoid. Either confirm it against the live DPA or drop the item.
+
+  - id: slack-pentest-date
+    vendor: Slack
+    domain: slack.com
+    dimension: certifications
+    expectation: absent
+    gold_claim: >
+      The date of Slack's most recent third-party penetration test is not
+      publicly disclosed.
+    primary_url: https://slack.com/trust/compliance
+    quoted_passage: >
+      (Page lists certifications and attestations. No penetration test date is
+      stated; pen test reports are made available under NDA via the trust
+      process, not published.)
+    accessed_on: 2026-09-14
+    review_status: pending
+    rationale: >
+      Structural non-disclosure. Vendors publish that they conduct pen tests and
+      make reports available under NDA; publishing the date and findings of the
+      most recent test is not industry practice. This is a property of the
+      industry, not of our search effort.
+
+  - id: cloudflare-prod-access-roster
+    vendor: Cloudflare
+    domain: cloudflare.com
+    dimension: subprocessors
+    expectation: absent
+    gold_claim: >
+      The identities of individual Cloudflare employees who hold production
+      database access are not publicly disclosed.
+    primary_url: https://www.cloudflare.com/trust-hub/
+    quoted_passage: >
+      (Trust hub describes access control practices in general terms. No roster
+      of individuals with production access is published.)
+    accessed_on: 2026-09-14
+    review_status: pending
+    rationale: >
+      Structural non-disclosure, and publishing it would itself be a security
+      problem. A strong negative: no amount of better retrieval should ever
+      surface this.
+
+  - id: datadog-key-rotation-interval
+    vendor: Datadog
+    domain: datadoghq.com
+    dimension: certifications
+    expectation: absent
+    gold_claim: >
+      Datadog's specific encryption key rotation interval is not publicly
+      disclosed.
+    primary_url: https://www.datadoghq.com/security/
+    quoted_passage: >
+      (Security page describes encryption in transit and at rest. No key
+      rotation interval is stated.)
+    accessed_on: 2026-09-14
+    review_status: pending
+    rationale: >
+      Structural non-disclosure. Control implementation detail of this kind
+      appears in SOC 2 reports shared under NDA, not on public pages.
+
+dropped:
+  - id: twilio-breach-aug2022
+    reason: >
+      Intended as a positive item. Tavily returned no twilio.com URL for the
+      August 2022 smishing incident across two advanced searches -- only
+      secondary coverage -- and the blog URL assumed for it returned HTTP 404.
+      Rather than anchor a positive label to a secondary source, the item was
+      dropped. Recorded here because the absence is informative: it is a
+      candidate negative, not a retrieval failure.
