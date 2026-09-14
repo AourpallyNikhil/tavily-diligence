@@ -111,7 +111,11 @@ failure, so recall cannot be left unmeasured. Hence a hybrid:
 - **Hand-curated seed** (10 items) for coverage and abstention. Ground truth
   established by opening primary sources and transcribing them, which also keeps
   the comparison fair — the question set is agent-neutral, so neither system's
-  behaviour shaped what it was asked.
+  behaviour shaped what it was asked. 7 of the 10 were then independently
+  re-checked against their cited page by a human reviewer and all 7 held. The
+  file distinguishes those (`human-signed-off`) from the 3 that were only
+  confirmed during construction (`primary-source-confirmed`), because those are
+  different claims and collapsing them would overstate the set's rigour.
 - **Trace-annotated claims** for claim-level precision at a scale hand curation
   cannot reach.
 

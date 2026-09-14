@@ -189,6 +189,10 @@ annotate. So:
   truth established by opening primary sources and transcribing them. Carries
   coverage and abstention, and keeps the comparison fair: the question set is
   agent-neutral, so neither system's behaviour shaped what it was asked.
+  7 of 10 items were then independently re-checked against their cited page by a
+  human reviewer and all 7 held; the file marks those `human-signed-off` and the
+  remaining 3 `primary-source-confirmed`, because "the page was opened during
+  construction" and "a second person verified it" are different claims.
 - **Trace-annotated claims** (`eval/results/claim_labels.json`) -- every emitted
   claim with its cited passage, for claim-level precision at a scale hand
   curation cannot reach.
