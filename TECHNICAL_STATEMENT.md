@@ -134,7 +134,57 @@ unenforced precision measured identically.
 
 The baseline is deliberately charitable: it gets the same structured output shape
 so that formatting is not the variable, and differs in retrieval (starter
-defaults) and enforcement (none). Results in `eval/results/summary.md`.
+defaults) and enforcement (none).
+
+## What the evaluation actually showed
+
+Five vendors, ten seed items, both systems run against live APIs.
+
+| metric | agent | baseline |
+|---|---|---|
+| coverage (positives, n=7) | 71% (5/7) | 57% (4/7) |
+| abstention accuracy (negatives, n=3) | 100% (3/3) | 100% (3/3) |
+| claims presented as supported | 145 | 37 |
+| of those, entailed by their citation | 100% | **78%** |
+| gate yield (claims removed) | 4% | n/a |
+| elapsed / llm calls | 746s / 264 | 45s / 14 |
+
+**One result holds.** 22% of the baseline's claims — presented to the user as
+supported, with a URL attached — are not entailed by the source they themselves
+cite. Roughly one claim in five in a prompt-only system is decorated with a
+citation that does not support it. That is the argument for enforcement, and it
+is measured.
+
+**The hypothesis I built the project around did not show an effect.** Abstention
+accuracy came out 3/3 for both systems. My negative items were too easy: neither
+system came near a pen-test date or a key rotation interval, so both abstained
+trivially and the metric could not discriminate. That is a defect in my seed
+design, not a property of the agent. Discriminating negatives have to be
+*near-misses* — facts adjacent to something findable, where a system under
+pressure to answer would reach for the neighbouring source and overstate it.
+Designing those is the first thing I would do with more time.
+
+**Coverage is noise.** 5/7 against 4/7 is one item. I report it for completeness
+and draw nothing from it.
+
+**The agent lost a case the baseline won,** which is the most interesting single
+row in the run. On `cloudflare-subprocessors-published` the baseline matched and
+the agent did not — because the relevance fix I describe above overcorrected.
+Domain steering plus "every claim must be a fact about the subject" pushed the
+agent to report the *contents* of Cloudflare's subprocessor list instead of the
+meta-fact that a public list exists. Fixing relevance created a blind spot for
+claims *about* disclosure. Both the fix and the regression it caused are in the
+history.
+
+**The gate fires rarely** — 4% of emitted claims. Its value is as a guarantee
+rather than a frequent corrector, and at 6 removals the seed set cannot tell us
+whether those removals were correct.
+
+**Cost is 16.6x** in wall-clock and 19x in LLM calls. Enforcement is not free.
+
+I am reporting a null result on my own headline metric because the alternative is
+a submission whose numbers cannot be trusted. The measurement was worth doing
+precisely because it disagreed with me.
 
 ## Observability
 
