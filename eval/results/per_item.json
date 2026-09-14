@@ -1,0 +1,42 @@
+[
+  {
+    "item_id": "lastpass-breach-aug2022",
+    "vendor": "LastPass",
+    "dimension": "breach_history",
+    "expectation": "present",
+    "system": "agent",
+    "matched": true,
+    "correct": true,
+    "reason": "Substantially the same assertion about unauthorized access in August 2022 via a compromised developer account, resulting in theft of source code and proprietary technical information."
+  },
+  {
+    "item_id": "lastpass-breach-dec2022",
+    "vendor": "LastPass",
+    "dimension": "breach_history",
+    "expectation": "present",
+    "system": "agent",
+    "matched": true,
+    "correct": true,
+    "reason": "Directly asserts that customer data was compromised using information from the August 2022 incident, matching the gold claim's core assertion."
+  },
+  {
+    "item_id": "lastpass-breach-aug2022",
+    "vendor": "LastPass",
+    "dimension": "breach_history",
+    "expectation": "present",
+    "system": "baseline",
+    "matched": false,
+    "correct": false,
+    "reason": "Different time, entity, and nature of incident"
+  },
+  {
+    "item_id": "lastpass-breach-dec2022",
+    "vendor": "LastPass",
+    "dimension": "breach_history",
+    "expectation": "present",
+    "system": "baseline",
+    "matched": true,
+    "correct": true,
+    "reason": "The finding states that LastPass disclosed a security incident in December 2022 involving unauthorized access and exfiltration of customer data, including encrypted vault data, which aligns with the g"
+  }
+]

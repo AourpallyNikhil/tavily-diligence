@@ -1,0 +1,758 @@
+[
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds ISO/IEC 27001:2013 certification.",
+    "source_url": "https://www.lastpass.com/trust-center/resources-dummy",
+    "passage": "Trust Center [Overview](/trust-center)[Security](/security)[Compliance](http://compliance.lastpass.com/)[Privacy](/trust-center/privacy)[Resources](/trust-center/resources) Trust Center [Overview](/trust-center)[Security](/security)[Compliance](http://compliance.lastpass.com/)[Privacy](/trust-center/privacy)[Resources](/trust-center/resources) ### COMPLIANCE # Compliance Certifications and Standards LastPass maintains global privacy and security certifications as part of our commitment to safeguarding our users\u2019 sensitive information. [\u2026] ## Compliance Compliance ![imgresourcesisoiec2xpng](/static/media/lazy.png) ### ISO/IEC 27001 Conducted by Schellman Compliance, LLC that LastPass conforms to the requirements of ISO/IEC 27001:2013. [View certificate](https://www.lastpass.com/-/media/745197b4b45348b385a222a39ba3c79d.pdf) Compliance ![](/static/media/lazy.png) ### SOC2 Type II Rigorous audit, review, and validation of security, availability, and confidentiality of LastPass cloud service. [Request the report](/resources/reports/download-our-soc2-typeii-assurance-package) Compliance ![](/static/media/lazy.png) ### SOC3 Report of LastPass' internal controls over security, availability",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds ISO/IEC 27001:2013 certification.",
+    "source_url": "https://www.lastpass.com/company/newsroom/f41f6e25-b4ee-4b2c-b70c-b3a540d84271",
+    "passage": "This achievement builds upon the company\u2019s robust privacy and security credentials, including ISO 27001, which LastPass was the [first password manager to earn in 2022](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fblog.lastpass.com%2Fposts%2F2022%2F07%2Flastpass-is-now-iso-certified&esheet=54105372&newsitemid=20240807465120&lan=en-US&anchor=first+password+manager+to+earn+in+2022&index=2&md5=38df71f8bd4c110e8b79b10ab5af8165) . \u201cThis certification demonstrates LastPass\u2019s strong commitment to transparency around the measures we take to protect our users and their data \u2013 ahead of any other password manager,\u201d said Mario Platt, Chief Information Security Officer, LastPass. [\u2026] ISO/IEC 27701 is the latest in LastPass\u2019s expansive list of security and privacy certifications, including [FIDO2 Server Certification](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fwww.lastpass.com%2Fcompany%2Fnewsroom%2Ff29d7e18-4372-4c84-967a-6ef6514872fb&esheet=54105372&newsitemid=20240807465120&lan=en-US&anchor=FIDO2+Server+Certification&index=3&md5=de4f79e9ae4984b3170db7382e826865) , [SOC 2 and SOC 3, and BSI C5](https://cts.businesswire.com/ct/CT?id=smartlink&url=http",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds ISO/IEC 27001:2013 certification.",
+    "source_url": "https://compliance.lastpass.com?itemName=physical_environmental&itemUid=4459b4a1-c6ee-446b-8dce-9d132e28c73f&itemname=overview",
+    "passage": "Title: LastPass Compliance Center | Powered by SafeBase # Compliance Center. ## Welcome to the LastPass Compliance Center. LastPass is committed to providing you with the information you need when you need it, which is why we've created this publicly available center to provide visibility on monitoring of LastPass systems and access to the latest certifications, policies, and security documentation. SOC 2 Type 2 Logo. SOC 2 Type 2SOC 3 Logo. SOC 3ISO/IEC 27001 Logo. ISO/IEC 27001ISO/IEC 27701 Logo. ISO/IEC 27701APEC CBPR Logo. APEC PRPEU-US DPF Logo. ## Documents. ## Featured Documents. PRODUCT SECURITYPenetration Testing Letters of Assessment. BC/DRDisaster Recover Testing Attestation.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds ISO/IEC 27001:2013 certification.",
+    "source_url": "https://compliance.lastpass.com?itemName=change_configuration_management&itemUid=26312559-cd87-46e1-8870-6db47e4c3e8d&itemname=overview",
+    "passage": "Title: LastPass Compliance Center | Powered by SafeBase # Compliance Center. ## Welcome to the LastPass Compliance Center. LastPass is committed to providing you with the information you need when you need it, which is why we've created this publicly available center to provide visibility on monitoring of LastPass systems and access to the latest certifications, policies, and security documentation. SOC 2 Type 2 Logo. SOC 2 Type 2SOC 3 Logo. SOC 3ISO/IEC 27001 Logo. ISO/IEC 27001ISO/IEC 27701 Logo. ISO/IEC 27701APEC CBPR Logo. APEC PRPEU-US DPF Logo. ## Documents. ## Featured Documents. PRODUCT SECURITYPenetration Testing Letters of Assessment. BC/DRDisaster Recover Testing Attestation.",
+    "machine_verdict": "partial",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds ISO/IEC 27001:2013 certification.",
+    "source_url": "https://blog.lastpass.com/posts/top-cybersecurity-frameworks",
+    "passage": "In simple terms, this means your master password goes through 600,000 transformations before it becomes the key that unlocks your vault, making it extremely difficult for attackers to crack through brute force. The [zero-knowledge architecture](https://www.lastpass.com/security/zero-knowledge-security) means that only you can decrypt and access your data. Not even LastPass can see your master password or vault contents. For compliance documentation, LastPass holds ISO 27001, ISO 27701, SOC 2 Type II, SOC 3, BSI C5, and FIDO2 Server certifications. [\u2026] For frameworks that require multifactor authentication, LastPass supports multiple MFA options including authenticator apps, YubiKey, FIDO2-certified hardware keys, and biometrics like Windows Hello and Touch ID. Ready to strengthen your security posture? [Try LastPass Business](https://www.lastpass.com/products/business) and see how simple compliance-friendly password management can be. ## ### Do I need SOC 2 compliance for my business? If you're a service provider that handles customer data, especially for enterprise clients, SOC 2 is often expected. Enterprise buyers frequentlyrequire SOC 2 Type II reports before signing contracts.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds ISO/IEC 27001:2013 certification.",
+    "source_url": "https://blog.lastpass.com/posts/ai-access-security-for-soc-2-audit",
+    "passage": "With LastPass Business Max, you can: That's the foundation for SOC 2: knowing what's in your environment before your auditor finds it first. And critically for SOC 2: LastPass maintains third-party certifications, authorizations, and attestations including ISO 27001, SOC 2 Type 2, SOC 3, BSI C5, IRAP, and TRUSTe. [Get the proof from our Compliance Center](https://compliance.lastpass.com/). So, when your auditor asks about your credential management system and the vendor behind it, that answer is already documented. Remember: The goal of AI access security for SOC 2 isn't to make your environment more complicated. [\u2026] For SOC 2 compliance, you need to document discovered tools, evaluate their risk, either allow or block them, and show auditors a repeatable discovery and review process that aligns with CC6.1 and CC6.6. ### How do SOC 2 Type 1 and Type 2 reports differ, and which is more valuable for enterprise client RFPs? SOC 2 Type 1 provides a snapshot of compliance at a point in time, while SOC 2 Type 2 provides evidence of the effectiveness of your controls over time (usually 6-12 months). It\u2019s important to remember that both Type 1 and Type 2 have the same scope; they differ on",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds ISO/IEC 27001:2013 certification.",
+    "source_url": "https://blog.lastpass.com/posts/iso-27001-compliance",
+    "passage": "### How LastPass meets ISO 27001 compliance LastPass is continuously monitoring security standards and ensuring it adheres to any industry best practices. This includes not only ISO 27001 but other standards such as SOC 2 and SOC 3. [LastPass achieved ISO 27001 certification](https://www.lastpass.com/company/newsroom/press-release/lastpass-receives-iso-27001-certification-for-security-management) through a rigorous process based on providing detailed documentation about the company and its processes. The certification also involved outlining management responsibilities, internal audits and preventative actions LastPass takes to ward off cybersecurity threats. [\u2026] More details on the certification can be found in the [LastPass Compliance Center](https://www.lastpass.com/company/newsroom/press-release/lastpass-receives-iso-27001-certification-for-security-management), which provides customers with the ability to view the ISO 27001 certificate. ### Benefits of implementing ISO 27001 Complying with standards is sometimes discussed as though it were a necessary evil, but ISO 27001 provides immense value to any organization that cares about its data and its stakeholders. [\u2026] By conductin",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds ISO/IEC 27001:2013 certification.",
+    "source_url": "https://blog.lastpass.com/posts/lastpass-is-now-iso-certified",
+    "passage": "![Log in](https://www.lastpass.com/-/media/44e0a57a5d5b4e11bffe4221783458ca.svg) ![Go to the LastPass.com home page](https://www.lastpass.com/-/media/1f23da193f0447af82a4e0179342eed4.svg) ![Contact sales](https://www.lastpass.com/-/media/b511ffa58fe14333868f2bbb7b758d18.svg) ![Log in](https://www.lastpass.com/-/media/44e0a57a5d5b4e11bffe4221783458ca.svg) ![Navigation menu](https://www.lastpass.com/-/media/fbc260615a2e4912a9eed2b7687b567c.svg) ![Contact sales](https://www.lastpass.com/-/media/b511ffa58fe14333868f2bbb7b758d18.svg) ![Log in](https://www.lastpass.com/-/media/44e0a57a5d5b4e11bffe4221783458ca.svg) ![Contact sales](https://www.lastpass.com/-/media/b511ffa58fe14333868f2bbb7b758d18.svg) ##### Blog ##### Blog ###### Recent ###### News & Insights ###### Cybersecurity ###### Product Tutorials ###### Threat Intel ###### Product Updates ###### Tips And Tricks # LastPass Is Now ISO 27001 Certified ![bg](/_next/image?url=%2Fsubscription_bg.png&w=750&q=75) ##### Subscribe & Save 20% off Premium or Families plans By subscribing, you agree to receive marketing communications regarding industry news and research, educational resources, and LastPass products and services. [\u2026] By being ",
+    "machine_verdict": "partial",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds ISO/IEC 27001:2013 certification.",
+    "source_url": "https://www.lastpass.com/company/newsroom/6b752061-6977-4735-9e35-6049c0679d1f",
+    "passage": "### PRESS RELEASE # LastPass Receives ISO 27001 Certification for Security Management July 27, 2022 Certification recognizes the company\u2019s outstanding cybersecurity platform. **BOSTON, July 27, 2022** \u2014 [LastPass](https://www.lastpass.com/), announced today that it has achieved ISO/IEC 27001: 2013 certification for its information security management system. Established by the International Organization for Standardization (ISO), the ISO 27001 certification follows a globally recognized standard which provides a model for establishing, monitoring and improving an information security management system. [\u2026] The ISO 27001 certification demonstrates LastPass\u2019s commitment to providing the following processes throughout the organization to ensure a strong information security management system: * Detailed documentation * Management responsibility * Internal audits * Continual improvement * Preventive actions \u201cThis certification solidifies our commitment to offering the highest level of security and confidentiality for our customers,\u201d said Dan DeMichele, Vice President of Product Management at LastPass. [\u2026] \u201cAs we look ahead, this achievement will allow us to continue delivering innovati",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass maintains SOC 2 Type II attestation.",
+    "source_url": "https://www.lastpass.com/trust-center/resources-dummy",
+    "passage": "Trust Center [Overview](/trust-center)[Security](/security)[Compliance](http://compliance.lastpass.com/)[Privacy](/trust-center/privacy)[Resources](/trust-center/resources) Trust Center [Overview](/trust-center)[Security](/security)[Compliance](http://compliance.lastpass.com/)[Privacy](/trust-center/privacy)[Resources](/trust-center/resources) ### COMPLIANCE # Compliance Certifications and Standards LastPass maintains global privacy and security certifications as part of our commitment to safeguarding our users\u2019 sensitive information. [\u2026] ## Compliance Compliance ![imgresourcesisoiec2xpng](/static/media/lazy.png) ### ISO/IEC 27001 Conducted by Schellman Compliance, LLC that LastPass conforms to the requirements of ISO/IEC 27001:2013. [View certificate](https://www.lastpass.com/-/media/745197b4b45348b385a222a39ba3c79d.pdf) Compliance ![](/static/media/lazy.png) ### SOC2 Type II Rigorous audit, review, and validation of security, availability, and confidentiality of LastPass cloud service. [Request the report](/resources/reports/download-our-soc2-typeii-assurance-package) Compliance ![](/static/media/lazy.png) ### SOC3 Report of LastPass' internal controls over security, availability",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass maintains SOC 2 Type II attestation.",
+    "source_url": "https://www.lastpass.com/company/newsroom/f41f6e25-b4ee-4b2c-b70c-b3a540d84271",
+    "passage": "This achievement builds upon the company\u2019s robust privacy and security credentials, including ISO 27001, which LastPass was the [first password manager to earn in 2022](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fblog.lastpass.com%2Fposts%2F2022%2F07%2Flastpass-is-now-iso-certified&esheet=54105372&newsitemid=20240807465120&lan=en-US&anchor=first+password+manager+to+earn+in+2022&index=2&md5=38df71f8bd4c110e8b79b10ab5af8165) . \u201cThis certification demonstrates LastPass\u2019s strong commitment to transparency around the measures we take to protect our users and their data \u2013 ahead of any other password manager,\u201d said Mario Platt, Chief Information Security Officer, LastPass. [\u2026] ISO/IEC 27701 is the latest in LastPass\u2019s expansive list of security and privacy certifications, including [FIDO2 Server Certification](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fwww.lastpass.com%2Fcompany%2Fnewsroom%2Ff29d7e18-4372-4c84-967a-6ef6514872fb&esheet=54105372&newsitemid=20240807465120&lan=en-US&anchor=FIDO2+Server+Certification&index=3&md5=de4f79e9ae4984b3170db7382e826865) , [SOC 2 and SOC 3, and BSI C5](https://cts.businesswire.com/ct/CT?id=smartlink&url=http",
+    "machine_verdict": "not_entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass maintains SOC 2 Type II attestation.",
+    "source_url": "https://compliance.lastpass.com?itemName=physical_environmental&itemUid=4459b4a1-c6ee-446b-8dce-9d132e28c73f&itemname=overview",
+    "passage": "Title: LastPass Compliance Center | Powered by SafeBase # Compliance Center. ## Welcome to the LastPass Compliance Center. LastPass is committed to providing you with the information you need when you need it, which is why we've created this publicly available center to provide visibility on monitoring of LastPass systems and access to the latest certifications, policies, and security documentation. SOC 2 Type 2 Logo. SOC 2 Type 2SOC 3 Logo. SOC 3ISO/IEC 27001 Logo. ISO/IEC 27001ISO/IEC 27701 Logo. ISO/IEC 27701APEC CBPR Logo. APEC PRPEU-US DPF Logo. ## Documents. ## Featured Documents. PRODUCT SECURITYPenetration Testing Letters of Assessment. BC/DRDisaster Recover Testing Attestation.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass maintains SOC 2 Type II attestation.",
+    "source_url": "https://compliance.lastpass.com?itemName=change_configuration_management&itemUid=26312559-cd87-46e1-8870-6db47e4c3e8d&itemname=overview",
+    "passage": "Title: LastPass Compliance Center | Powered by SafeBase # Compliance Center. ## Welcome to the LastPass Compliance Center. LastPass is committed to providing you with the information you need when you need it, which is why we've created this publicly available center to provide visibility on monitoring of LastPass systems and access to the latest certifications, policies, and security documentation. SOC 2 Type 2 Logo. SOC 2 Type 2SOC 3 Logo. SOC 3ISO/IEC 27001 Logo. ISO/IEC 27001ISO/IEC 27701 Logo. ISO/IEC 27701APEC CBPR Logo. APEC PRPEU-US DPF Logo. ## Documents. ## Featured Documents. PRODUCT SECURITYPenetration Testing Letters of Assessment. BC/DRDisaster Recover Testing Attestation.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass maintains SOC 2 Type II attestation.",
+    "source_url": "https://blog.lastpass.com/posts/lastpass-earns-soc-2-type-ii-attestation",
+    "passage": "It's an expert and widely respected review of how systems and procedures are designed. A SOC 2 Type II report goes the extra mile \u2013 it evaluates",
+    "machine_verdict": "not_entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass maintains SOC 2 Type II attestation.",
+    "source_url": "https://blog.lastpass.com/posts/lastpass-achieves-soc-2",
+    "passage": "LastPass has officially acquired a SOC 2 attestation report. The SOC 2 audit is a detailed review of the controls and processes in place to",
+    "machine_verdict": "not_entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass maintains SOC 2 Type II attestation.",
+    "source_url": "https://blog.lastpass.com/posts/top-cybersecurity-frameworks",
+    "passage": "In simple terms, this means your master password goes through 600,000 transformations before it becomes the key that unlocks your vault, making it extremely difficult for attackers to crack through brute force. The [zero-knowledge architecture](https://www.lastpass.com/security/zero-knowledge-security) means that only you can decrypt and access your data. Not even LastPass can see your master password or vault contents. For compliance documentation, LastPass holds ISO 27001, ISO 27701, SOC 2 Type II, SOC 3, BSI C5, and FIDO2 Server certifications. [\u2026] For frameworks that require multifactor authentication, LastPass supports multiple MFA options including authenticator apps, YubiKey, FIDO2-certified hardware keys, and biometrics like Windows Hello and Touch ID. Ready to strengthen your security posture? [Try LastPass Business](https://www.lastpass.com/products/business) and see how simple compliance-friendly password management can be. ## ### Do I need SOC 2 compliance for my business? If you're a service provider that handles customer data, especially for enterprise clients, SOC 2 is often expected. Enterprise buyers frequentlyrequire SOC 2 Type II reports before signing contracts.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass maintains SOC 2 Type II attestation.",
+    "source_url": "https://blog.lastpass.com/posts/ai-access-security-for-soc-2-audit",
+    "passage": "With LastPass Business Max, you can: That's the foundation for SOC 2: knowing what's in your environment before your auditor finds it first. And critically for SOC 2: LastPass maintains third-party certifications, authorizations, and attestations including ISO 27001, SOC 2 Type 2, SOC 3, BSI C5, IRAP, and TRUSTe. [Get the proof from our Compliance Center](https://compliance.lastpass.com/). So, when your auditor asks about your credential management system and the vendor behind it, that answer is already documented. Remember: The goal of AI access security for SOC 2 isn't to make your environment more complicated. [\u2026] For SOC 2 compliance, you need to document discovered tools, evaluate their risk, either allow or block them, and show auditors a repeatable discovery and review process that aligns with CC6.1 and CC6.6. ### How do SOC 2 Type 1 and Type 2 reports differ, and which is more valuable for enterprise client RFPs? SOC 2 Type 1 provides a snapshot of compliance at a point in time, while SOC 2 Type 2 provides evidence of the effectiveness of your controls over time (usually 6-12 months). It\u2019s important to remember that both Type 1 and Type 2 have the same scope; they differ on",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds SOC 3 attestation.",
+    "source_url": "https://www.lastpass.com/trust-center/resources-dummy",
+    "passage": "Trust Center [Overview](/trust-center)[Security](/security)[Compliance](http://compliance.lastpass.com/)[Privacy](/trust-center/privacy)[Resources](/trust-center/resources) Trust Center [Overview](/trust-center)[Security](/security)[Compliance](http://compliance.lastpass.com/)[Privacy](/trust-center/privacy)[Resources](/trust-center/resources) ### COMPLIANCE # Compliance Certifications and Standards LastPass maintains global privacy and security certifications as part of our commitment to safeguarding our users\u2019 sensitive information. [\u2026] ## Compliance Compliance ![imgresourcesisoiec2xpng](/static/media/lazy.png) ### ISO/IEC 27001 Conducted by Schellman Compliance, LLC that LastPass conforms to the requirements of ISO/IEC 27001:2013. [View certificate](https://www.lastpass.com/-/media/745197b4b45348b385a222a39ba3c79d.pdf) Compliance ![](/static/media/lazy.png) ### SOC2 Type II Rigorous audit, review, and validation of security, availability, and confidentiality of LastPass cloud service. [Request the report](/resources/reports/download-our-soc2-typeii-assurance-package) Compliance ![](/static/media/lazy.png) ### SOC3 Report of LastPass' internal controls over security, availability",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds SOC 3 attestation.",
+    "source_url": "https://www.lastpass.com/company/newsroom/f41f6e25-b4ee-4b2c-b70c-b3a540d84271",
+    "passage": "This achievement builds upon the company\u2019s robust privacy and security credentials, including ISO 27001, which LastPass was the [first password manager to earn in 2022](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fblog.lastpass.com%2Fposts%2F2022%2F07%2Flastpass-is-now-iso-certified&esheet=54105372&newsitemid=20240807465120&lan=en-US&anchor=first+password+manager+to+earn+in+2022&index=2&md5=38df71f8bd4c110e8b79b10ab5af8165) . \u201cThis certification demonstrates LastPass\u2019s strong commitment to transparency around the measures we take to protect our users and their data \u2013 ahead of any other password manager,\u201d said Mario Platt, Chief Information Security Officer, LastPass. [\u2026] ISO/IEC 27701 is the latest in LastPass\u2019s expansive list of security and privacy certifications, including [FIDO2 Server Certification](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fwww.lastpass.com%2Fcompany%2Fnewsroom%2Ff29d7e18-4372-4c84-967a-6ef6514872fb&esheet=54105372&newsitemid=20240807465120&lan=en-US&anchor=FIDO2+Server+Certification&index=3&md5=de4f79e9ae4984b3170db7382e826865) , [SOC 2 and SOC 3, and BSI C5](https://cts.businesswire.com/ct/CT?id=smartlink&url=http",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds SOC 3 attestation.",
+    "source_url": "https://compliance.lastpass.com?itemName=physical_environmental&itemUid=4459b4a1-c6ee-446b-8dce-9d132e28c73f&itemname=overview",
+    "passage": "Title: LastPass Compliance Center | Powered by SafeBase # Compliance Center. ## Welcome to the LastPass Compliance Center. LastPass is committed to providing you with the information you need when you need it, which is why we've created this publicly available center to provide visibility on monitoring of LastPass systems and access to the latest certifications, policies, and security documentation. SOC 2 Type 2 Logo. SOC 2 Type 2SOC 3 Logo. SOC 3ISO/IEC 27001 Logo. ISO/IEC 27001ISO/IEC 27701 Logo. ISO/IEC 27701APEC CBPR Logo. APEC PRPEU-US DPF Logo. ## Documents. ## Featured Documents. PRODUCT SECURITYPenetration Testing Letters of Assessment. BC/DRDisaster Recover Testing Attestation.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds SOC 3 attestation.",
+    "source_url": "https://compliance.lastpass.com?itemName=change_configuration_management&itemUid=26312559-cd87-46e1-8870-6db47e4c3e8d&itemname=overview",
+    "passage": "Title: LastPass Compliance Center | Powered by SafeBase # Compliance Center. ## Welcome to the LastPass Compliance Center. LastPass is committed to providing you with the information you need when you need it, which is why we've created this publicly available center to provide visibility on monitoring of LastPass systems and access to the latest certifications, policies, and security documentation. SOC 2 Type 2 Logo. SOC 2 Type 2SOC 3 Logo. SOC 3ISO/IEC 27001 Logo. ISO/IEC 27001ISO/IEC 27701 Logo. ISO/IEC 27701APEC CBPR Logo. APEC PRPEU-US DPF Logo. ## Documents. ## Featured Documents. PRODUCT SECURITYPenetration Testing Letters of Assessment. BC/DRDisaster Recover Testing Attestation.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds SOC 3 attestation.",
+    "source_url": "https://blog.lastpass.com/posts/top-cybersecurity-frameworks",
+    "passage": "In simple terms, this means your master password goes through 600,000 transformations before it becomes the key that unlocks your vault, making it extremely difficult for attackers to crack through brute force. The [zero-knowledge architecture](https://www.lastpass.com/security/zero-knowledge-security) means that only you can decrypt and access your data. Not even LastPass can see your master password or vault contents. For compliance documentation, LastPass holds ISO 27001, ISO 27701, SOC 2 Type II, SOC 3, BSI C5, and FIDO2 Server certifications. [\u2026] For frameworks that require multifactor authentication, LastPass supports multiple MFA options including authenticator apps, YubiKey, FIDO2-certified hardware keys, and biometrics like Windows Hello and Touch ID. Ready to strengthen your security posture? [Try LastPass Business](https://www.lastpass.com/products/business) and see how simple compliance-friendly password management can be. ## ### Do I need SOC 2 compliance for my business? If you're a service provider that handles customer data, especially for enterprise clients, SOC 2 is often expected. Enterprise buyers frequentlyrequire SOC 2 Type II reports before signing contracts.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds SOC 3 attestation.",
+    "source_url": "https://blog.lastpass.com/posts/ai-access-security-for-soc-2-audit",
+    "passage": "With LastPass Business Max, you can: That's the foundation for SOC 2: knowing what's in your environment before your auditor finds it first. And critically for SOC 2: LastPass maintains third-party certifications, authorizations, and attestations including ISO 27001, SOC 2 Type 2, SOC 3, BSI C5, IRAP, and TRUSTe. [Get the proof from our Compliance Center](https://compliance.lastpass.com/). So, when your auditor asks about your credential management system and the vendor behind it, that answer is already documented. Remember: The goal of AI access security for SOC 2 isn't to make your environment more complicated. [\u2026] For SOC 2 compliance, you need to document discovered tools, evaluate their risk, either allow or block them, and show auditors a repeatable discovery and review process that aligns with CC6.1 and CC6.6. ### How do SOC 2 Type 1 and Type 2 reports differ, and which is more valuable for enterprise client RFPs? SOC 2 Type 1 provides a snapshot of compliance at a point in time, while SOC 2 Type 2 provides evidence of the effectiveness of your controls over time (usually 6-12 months). It\u2019s important to remember that both Type 1 and Type 2 have the same scope; they differ on",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds TRUSTe Enterprise Privacy Certification.",
+    "source_url": "https://www.lastpass.com/trust-center/resources-dummy",
+    "passage": "Trust Center [Overview](/trust-center)[Security](/security)[Compliance](http://compliance.lastpass.com/)[Privacy](/trust-center/privacy)[Resources](/trust-center/resources) Trust Center [Overview](/trust-center)[Security](/security)[Compliance](http://compliance.lastpass.com/)[Privacy](/trust-center/privacy)[Resources](/trust-center/resources) ### COMPLIANCE # Compliance Certifications and Standards LastPass maintains global privacy and security certifications as part of our commitment to safeguarding our users\u2019 sensitive information. [\u2026] ## Compliance Compliance ![imgresourcesisoiec2xpng](/static/media/lazy.png) ### ISO/IEC 27001 Conducted by Schellman Compliance, LLC that LastPass conforms to the requirements of ISO/IEC 27001:2013. [View certificate](https://www.lastpass.com/-/media/745197b4b45348b385a222a39ba3c79d.pdf) Compliance ![](/static/media/lazy.png) ### SOC2 Type II Rigorous audit, review, and validation of security, availability, and confidentiality of LastPass cloud service. [Request the report](/resources/reports/download-our-soc2-typeii-assurance-package) Compliance ![](/static/media/lazy.png) ### SOC3 Report of LastPass' internal controls over security, availability",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds TRUSTe Enterprise Privacy Certification.",
+    "source_url": "https://blog.lastpass.com/posts/ai-access-security-for-soc-2-audit",
+    "passage": "With LastPass Business Max, you can: That's the foundation for SOC 2: knowing what's in your environment before your auditor finds it first. And critically for SOC 2: LastPass maintains third-party certifications, authorizations, and attestations including ISO 27001, SOC 2 Type 2, SOC 3, BSI C5, IRAP, and TRUSTe. [Get the proof from our Compliance Center](https://compliance.lastpass.com/). So, when your auditor asks about your credential management system and the vendor behind it, that answer is already documented. Remember: The goal of AI access security for SOC 2 isn't to make your environment more complicated. [\u2026] For SOC 2 compliance, you need to document discovered tools, evaluate their risk, either allow or block them, and show auditors a repeatable discovery and review process that aligns with CC6.1 and CC6.6. ### How do SOC 2 Type 1 and Type 2 reports differ, and which is more valuable for enterprise client RFPs? SOC 2 Type 1 provides a snapshot of compliance at a point in time, while SOC 2 Type 2 provides evidence of the effectiveness of your controls over time (usually 6-12 months). It\u2019s important to remember that both Type 1 and Type 2 have the same scope; they differ on",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds ISO/IEC 27701 certification.",
+    "source_url": "https://www.lastpass.com/company/newsroom/f41f6e25-b4ee-4b2c-b70c-b3a540d84271",
+    "passage": "This achievement builds upon the company\u2019s robust privacy and security credentials, including ISO 27001, which LastPass was the [first password manager to earn in 2022](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fblog.lastpass.com%2Fposts%2F2022%2F07%2Flastpass-is-now-iso-certified&esheet=54105372&newsitemid=20240807465120&lan=en-US&anchor=first+password+manager+to+earn+in+2022&index=2&md5=38df71f8bd4c110e8b79b10ab5af8165) . \u201cThis certification demonstrates LastPass\u2019s strong commitment to transparency around the measures we take to protect our users and their data \u2013 ahead of any other password manager,\u201d said Mario Platt, Chief Information Security Officer, LastPass. [\u2026] ISO/IEC 27701 is the latest in LastPass\u2019s expansive list of security and privacy certifications, including [FIDO2 Server Certification](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fwww.lastpass.com%2Fcompany%2Fnewsroom%2Ff29d7e18-4372-4c84-967a-6ef6514872fb&esheet=54105372&newsitemid=20240807465120&lan=en-US&anchor=FIDO2+Server+Certification&index=3&md5=de4f79e9ae4984b3170db7382e826865) , [SOC 2 and SOC 3, and BSI C5](https://cts.businesswire.com/ct/CT?id=smartlink&url=http",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds ISO/IEC 27701 certification.",
+    "source_url": "https://compliance.lastpass.com?itemName=physical_environmental&itemUid=4459b4a1-c6ee-446b-8dce-9d132e28c73f&itemname=overview",
+    "passage": "Title: LastPass Compliance Center | Powered by SafeBase # Compliance Center. ## Welcome to the LastPass Compliance Center. LastPass is committed to providing you with the information you need when you need it, which is why we've created this publicly available center to provide visibility on monitoring of LastPass systems and access to the latest certifications, policies, and security documentation. SOC 2 Type 2 Logo. SOC 2 Type 2SOC 3 Logo. SOC 3ISO/IEC 27001 Logo. ISO/IEC 27001ISO/IEC 27701 Logo. ISO/IEC 27701APEC CBPR Logo. APEC PRPEU-US DPF Logo. ## Documents. ## Featured Documents. PRODUCT SECURITYPenetration Testing Letters of Assessment. BC/DRDisaster Recover Testing Attestation.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds ISO/IEC 27701 certification.",
+    "source_url": "https://compliance.lastpass.com?itemName=change_configuration_management&itemUid=26312559-cd87-46e1-8870-6db47e4c3e8d&itemname=overview",
+    "passage": "Title: LastPass Compliance Center | Powered by SafeBase # Compliance Center. ## Welcome to the LastPass Compliance Center. LastPass is committed to providing you with the information you need when you need it, which is why we've created this publicly available center to provide visibility on monitoring of LastPass systems and access to the latest certifications, policies, and security documentation. SOC 2 Type 2 Logo. SOC 2 Type 2SOC 3 Logo. SOC 3ISO/IEC 27001 Logo. ISO/IEC 27001ISO/IEC 27701 Logo. ISO/IEC 27701APEC CBPR Logo. APEC PRPEU-US DPF Logo. ## Documents. ## Featured Documents. PRODUCT SECURITYPenetration Testing Letters of Assessment. BC/DRDisaster Recover Testing Attestation.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds ISO/IEC 27701 certification.",
+    "source_url": "https://blog.lastpass.com/posts/top-cybersecurity-frameworks",
+    "passage": "In simple terms, this means your master password goes through 600,000 transformations before it becomes the key that unlocks your vault, making it extremely difficult for attackers to crack through brute force. The [zero-knowledge architecture](https://www.lastpass.com/security/zero-knowledge-security) means that only you can decrypt and access your data. Not even LastPass can see your master password or vault contents. For compliance documentation, LastPass holds ISO 27001, ISO 27701, SOC 2 Type II, SOC 3, BSI C5, and FIDO2 Server certifications. [\u2026] For frameworks that require multifactor authentication, LastPass supports multiple MFA options including authenticator apps, YubiKey, FIDO2-certified hardware keys, and biometrics like Windows Hello and Touch ID. Ready to strengthen your security posture? [Try LastPass Business](https://www.lastpass.com/products/business) and see how simple compliance-friendly password management can be. ## ### Do I need SOC 2 compliance for my business? If you're a service provider that handles customer data, especially for enterprise clients, SOC 2 is often expected. Enterprise buyers frequentlyrequire SOC 2 Type II reports before signing contracts.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds FIDO2 Server Certification.",
+    "source_url": "https://www.lastpass.com/company/newsroom/f41f6e25-b4ee-4b2c-b70c-b3a540d84271",
+    "passage": "This achievement builds upon the company\u2019s robust privacy and security credentials, including ISO 27001, which LastPass was the [first password manager to earn in 2022](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fblog.lastpass.com%2Fposts%2F2022%2F07%2Flastpass-is-now-iso-certified&esheet=54105372&newsitemid=20240807465120&lan=en-US&anchor=first+password+manager+to+earn+in+2022&index=2&md5=38df71f8bd4c110e8b79b10ab5af8165) . \u201cThis certification demonstrates LastPass\u2019s strong commitment to transparency around the measures we take to protect our users and their data \u2013 ahead of any other password manager,\u201d said Mario Platt, Chief Information Security Officer, LastPass. [\u2026] ISO/IEC 27701 is the latest in LastPass\u2019s expansive list of security and privacy certifications, including [FIDO2 Server Certification](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fwww.lastpass.com%2Fcompany%2Fnewsroom%2Ff29d7e18-4372-4c84-967a-6ef6514872fb&esheet=54105372&newsitemid=20240807465120&lan=en-US&anchor=FIDO2+Server+Certification&index=3&md5=de4f79e9ae4984b3170db7382e826865) , [SOC 2 and SOC 3, and BSI C5](https://cts.businesswire.com/ct/CT?id=smartlink&url=http",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds FIDO2 Server Certification.",
+    "source_url": "https://blog.lastpass.com/posts/top-cybersecurity-frameworks",
+    "passage": "In simple terms, this means your master password goes through 600,000 transformations before it becomes the key that unlocks your vault, making it extremely difficult for attackers to crack through brute force. The [zero-knowledge architecture](https://www.lastpass.com/security/zero-knowledge-security) means that only you can decrypt and access your data. Not even LastPass can see your master password or vault contents. For compliance documentation, LastPass holds ISO 27001, ISO 27701, SOC 2 Type II, SOC 3, BSI C5, and FIDO2 Server certifications. [\u2026] For frameworks that require multifactor authentication, LastPass supports multiple MFA options including authenticator apps, YubiKey, FIDO2-certified hardware keys, and biometrics like Windows Hello and Touch ID. Ready to strengthen your security posture? [Try LastPass Business](https://www.lastpass.com/products/business) and see how simple compliance-friendly password management can be. ## ### Do I need SOC 2 compliance for my business? If you're a service provider that handles customer data, especially for enterprise clients, SOC 2 is often expected. Enterprise buyers frequentlyrequire SOC 2 Type II reports before signing contracts.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds BSI C5 certification.",
+    "source_url": "https://www.lastpass.com/company/newsroom/f41f6e25-b4ee-4b2c-b70c-b3a540d84271",
+    "passage": "This achievement builds upon the company\u2019s robust privacy and security credentials, including ISO 27001, which LastPass was the [first password manager to earn in 2022](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fblog.lastpass.com%2Fposts%2F2022%2F07%2Flastpass-is-now-iso-certified&esheet=54105372&newsitemid=20240807465120&lan=en-US&anchor=first+password+manager+to+earn+in+2022&index=2&md5=38df71f8bd4c110e8b79b10ab5af8165) . \u201cThis certification demonstrates LastPass\u2019s strong commitment to transparency around the measures we take to protect our users and their data \u2013 ahead of any other password manager,\u201d said Mario Platt, Chief Information Security Officer, LastPass. [\u2026] ISO/IEC 27701 is the latest in LastPass\u2019s expansive list of security and privacy certifications, including [FIDO2 Server Certification](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fwww.lastpass.com%2Fcompany%2Fnewsroom%2Ff29d7e18-4372-4c84-967a-6ef6514872fb&esheet=54105372&newsitemid=20240807465120&lan=en-US&anchor=FIDO2+Server+Certification&index=3&md5=de4f79e9ae4984b3170db7382e826865) , [SOC 2 and SOC 3, and BSI C5](https://cts.businesswire.com/ct/CT?id=smartlink&url=http",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds BSI C5 certification.",
+    "source_url": "https://blog.lastpass.com/posts/top-cybersecurity-frameworks",
+    "passage": "In simple terms, this means your master password goes through 600,000 transformations before it becomes the key that unlocks your vault, making it extremely difficult for attackers to crack through brute force. The [zero-knowledge architecture](https://www.lastpass.com/security/zero-knowledge-security) means that only you can decrypt and access your data. Not even LastPass can see your master password or vault contents. For compliance documentation, LastPass holds ISO 27001, ISO 27701, SOC 2 Type II, SOC 3, BSI C5, and FIDO2 Server certifications. [\u2026] For frameworks that require multifactor authentication, LastPass supports multiple MFA options including authenticator apps, YubiKey, FIDO2-certified hardware keys, and biometrics like Windows Hello and Touch ID. Ready to strengthen your security posture? [Try LastPass Business](https://www.lastpass.com/products/business) and see how simple compliance-friendly password management can be. ## ### Do I need SOC 2 compliance for my business? If you're a service provider that handles customer data, especially for enterprise clients, SOC 2 is often expected. Enterprise buyers frequentlyrequire SOC 2 Type II reports before signing contracts.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds BSI C5 certification.",
+    "source_url": "https://blog.lastpass.com/posts/ai-access-security-for-soc-2-audit",
+    "passage": "With LastPass Business Max, you can: That's the foundation for SOC 2: knowing what's in your environment before your auditor finds it first. And critically for SOC 2: LastPass maintains third-party certifications, authorizations, and attestations including ISO 27001, SOC 2 Type 2, SOC 3, BSI C5, IRAP, and TRUSTe. [Get the proof from our Compliance Center](https://compliance.lastpass.com/). So, when your auditor asks about your credential management system and the vendor behind it, that answer is already documented. Remember: The goal of AI access security for SOC 2 isn't to make your environment more complicated. [\u2026] For SOC 2 compliance, you need to document discovered tools, evaluate their risk, either allow or block them, and show auditors a repeatable discovery and review process that aligns with CC6.1 and CC6.6. ### How do SOC 2 Type 1 and Type 2 reports differ, and which is more valuable for enterprise client RFPs? SOC 2 Type 1 provides a snapshot of compliance at a point in time, while SOC 2 Type 2 provides evidence of the effectiveness of your controls over time (usually 6-12 months). It\u2019s important to remember that both Type 1 and Type 2 have the same scope; they differ on",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds IRAP certification.",
+    "source_url": "https://blog.lastpass.com/posts/ai-access-security-for-soc-2-audit",
+    "passage": "With LastPass Business Max, you can: That's the foundation for SOC 2: knowing what's in your environment before your auditor finds it first. And critically for SOC 2: LastPass maintains third-party certifications, authorizations, and attestations including ISO 27001, SOC 2 Type 2, SOC 3, BSI C5, IRAP, and TRUSTe. [Get the proof from our Compliance Center](https://compliance.lastpass.com/). So, when your auditor asks about your credential management system and the vendor behind it, that answer is already documented. Remember: The goal of AI access security for SOC 2 isn't to make your environment more complicated. [\u2026] For SOC 2 compliance, you need to document discovered tools, evaluate their risk, either allow or block them, and show auditors a repeatable discovery and review process that aligns with CC6.1 and CC6.6. ### How do SOC 2 Type 1 and Type 2 reports differ, and which is more valuable for enterprise client RFPs? SOC 2 Type 1 provides a snapshot of compliance at a point in time, while SOC 2 Type 2 provides evidence of the effectiveness of your controls over time (usually 6-12 months). It\u2019s important to remember that both Type 1 and Type 2 have the same scope; they differ on",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds APEC CBPR certification.",
+    "source_url": "https://compliance.lastpass.com?itemName=physical_environmental&itemUid=4459b4a1-c6ee-446b-8dce-9d132e28c73f&itemname=overview",
+    "passage": "Title: LastPass Compliance Center | Powered by SafeBase # Compliance Center. ## Welcome to the LastPass Compliance Center. LastPass is committed to providing you with the information you need when you need it, which is why we've created this publicly available center to provide visibility on monitoring of LastPass systems and access to the latest certifications, policies, and security documentation. SOC 2 Type 2 Logo. SOC 2 Type 2SOC 3 Logo. SOC 3ISO/IEC 27001 Logo. ISO/IEC 27001ISO/IEC 27701 Logo. ISO/IEC 27701APEC CBPR Logo. APEC PRPEU-US DPF Logo. ## Documents. ## Featured Documents. PRODUCT SECURITYPenetration Testing Letters of Assessment. BC/DRDisaster Recover Testing Attestation.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds APEC CBPR certification.",
+    "source_url": "https://compliance.lastpass.com?itemName=change_configuration_management&itemUid=26312559-cd87-46e1-8870-6db47e4c3e8d&itemname=overview",
+    "passage": "Title: LastPass Compliance Center | Powered by SafeBase # Compliance Center. ## Welcome to the LastPass Compliance Center. LastPass is committed to providing you with the information you need when you need it, which is why we've created this publicly available center to provide visibility on monitoring of LastPass systems and access to the latest certifications, policies, and security documentation. SOC 2 Type 2 Logo. SOC 2 Type 2SOC 3 Logo. SOC 3ISO/IEC 27001 Logo. ISO/IEC 27001ISO/IEC 27701 Logo. ISO/IEC 27701APEC CBPR Logo. APEC PRPEU-US DPF Logo. ## Documents. ## Featured Documents. PRODUCT SECURITYPenetration Testing Letters of Assessment. BC/DRDisaster Recover Testing Attestation.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds EU-US DPF certification.",
+    "source_url": "https://compliance.lastpass.com?itemName=physical_environmental&itemUid=4459b4a1-c6ee-446b-8dce-9d132e28c73f&itemname=overview",
+    "passage": "Title: LastPass Compliance Center | Powered by SafeBase # Compliance Center. ## Welcome to the LastPass Compliance Center. LastPass is committed to providing you with the information you need when you need it, which is why we've created this publicly available center to provide visibility on monitoring of LastPass systems and access to the latest certifications, policies, and security documentation. SOC 2 Type 2 Logo. SOC 2 Type 2SOC 3 Logo. SOC 3ISO/IEC 27001 Logo. ISO/IEC 27001ISO/IEC 27701 Logo. ISO/IEC 27701APEC CBPR Logo. APEC PRPEU-US DPF Logo. ## Documents. ## Featured Documents. PRODUCT SECURITYPenetration Testing Letters of Assessment. BC/DRDisaster Recover Testing Attestation.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass holds EU-US DPF certification.",
+    "source_url": "https://compliance.lastpass.com?itemName=change_configuration_management&itemUid=26312559-cd87-46e1-8870-6db47e4c3e8d&itemname=overview",
+    "passage": "Title: LastPass Compliance Center | Powered by SafeBase # Compliance Center. ## Welcome to the LastPass Compliance Center. LastPass is committed to providing you with the information you need when you need it, which is why we've created this publicly available center to provide visibility on monitoring of LastPass systems and access to the latest certifications, policies, and security documentation. SOC 2 Type 2 Logo. SOC 2 Type 2SOC 3 Logo. SOC 3ISO/IEC 27001 Logo. ISO/IEC 27001ISO/IEC 27701 Logo. ISO/IEC 27701APEC CBPR Logo. APEC PRPEU-US DPF Logo. ## Documents. ## Featured Documents. PRODUCT SECURITYPenetration Testing Letters of Assessment. BC/DRDisaster Recover Testing Attestation.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass detected unusual activity within portions of its development environment two weeks prior to December 22, 2022, where an unauthorized party gained access through a single compromised developer account and took portions of source code and some proprietary LastPass technical information.",
+    "source_url": "https://blog.lastpass.com/posts/notice-of-recent-security-incident",
+    "passage": "Our investigation determined that the threat actor gained access to the Development environment using a developer\u2019s compromised endpoint. While the method used for the initial endpoint compromise is inconclusive, the threat actor utilized their persistent access to impersonate the developer once the developer had successfully authenticated using multi-factor authentication. Although the threat actor was able to access the Development environment, our system design and controls prevented the threat actor from accessing any customer data or encrypted password vaults. [\u2026] Two weeks ago, we detected some unusual activity within portions of the LastPass development environment. After initiating an immediate investigation, we have seen no evidence that this incident involved any access to customer data or encrypted password vaults. We have determined that an unauthorized party gained access to portions of the LastPass development environment through a single compromised developer account and took portions of source code and some proprietary LastPass technical information. Our products and services are operating normally. In response to the incident, we have deployed containment and mitig",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "On June 12th, LastPass was made aware of an incident at Klue, a third-party market intelligence platform, where an unauthorized actor obtained OAuth tokens Klue held for many of its customers, including LastPass, and used these credentials to access LastPass customer data within its Salesforce environment.",
+    "source_url": "https://blog.lastpass.com/posts/klue-supply-chain-incident-and-lastpass-response",
+    "passage": "On June 12th LastPass was made aware of an incident that occurred at Klue (klue.com), a third-party market intelligence platform utilized by our go-to-market teams which integrates with our Salesforce and Gong systems. The incident had a broad impact across many companies including LastPass. We immediately launched an investigation and learned that, as part of this incident, an unauthorized actor was able to obtain OAuth tokens Klue held for many of its customers, including LastPass. The threat actor then used these credentials to access LastPass customer data within our Salesforce environment. Remediation has been completed, and the exposed Klue OAuth tokens have since been rotated. [\u2026] **It is important to note that the scope of this incident is limited to** **only those systems that integrate with Klue\u2019s application. LastPass products, services, and infrastructure were not impacted in any way and customer vaults remain secure. There is also no evidence the threat actor accessed any Gong-related data.** ## What Information May Be Affected? The information accessed was limited to standard business contact information and related customer relationship management (CRM) data, includi",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "The information accessed in the Klue incident was limited to standard business contact information and related customer relationship management (CRM) data, including customer names, phone numbers, email addresses, physical addresses, support case data, and sales-related data.",
+    "source_url": "https://blog.lastpass.com/posts/klue-supply-chain-incident-and-lastpass-response",
+    "passage": "On June 12th LastPass was made aware of an incident that occurred at Klue (klue.com), a third-party market intelligence platform utilized by our go-to-market teams which integrates with our Salesforce and Gong systems. The incident had a broad impact across many companies including LastPass. We immediately launched an investigation and learned that, as part of this incident, an unauthorized actor was able to obtain OAuth tokens Klue held for many of its customers, including LastPass. The threat actor then used these credentials to access LastPass customer data within our Salesforce environment. Remediation has been completed, and the exposed Klue OAuth tokens have since been rotated. [\u2026] **It is important to note that the scope of this incident is limited to** **only those systems that integrate with Klue\u2019s application. LastPass products, services, and infrastructure were not impacted in any way and customer vaults remain secure. There is also no evidence the threat actor accessed any Gong-related data.** ## What Information May Be Affected? The information accessed was limited to standard business contact information and related customer relationship management (CRM) data, includi",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "In August 2022, an attacker compromised the laptop of a LastPass software developer and downloaded 14 of LastPass's source code repositories, technical documentation, and an encrypted version of the SSE-C key that secured backups of LastPass's production database inside AWS S3 buckets.",
+    "source_url": "https://en.wikipedia.org/wiki/2022_LastPass_data_breach",
+    "passage": "In the first incident, an attacker accessed parts of LastPass's development environment and exfiltrated source code repositories and technical documentation, including an encrypted copy of the key used to protect backups of customer data stored in [Amazon S3](https://en.wikipedia.org/wiki/Amazon_S3 \"Amazon S3\"). In a second incident, a senior DevOps engineer's personal computer was compromised, and the attacker used a keystroke logger to obtain the employee's credentials and access an internal vault holding further keys. [\u2026] At the time of the incidents, LastPass operated its production environment in physical data centres and used [Amazon S3](https://en.wikipedia.org/wiki/Amazon_S3 \"Amazon S3\") \"buckets\" for backup storage; it secured those backups using server-side encryption with a SSE-C key.[[a]](#cite_note-1) The SSE-C key was always encrypted when not in use, and only four people at LastPass were able to decrypt the key itself.[[1]](#cite_note-:0-2): 15 During the relevant period, LastPass permitted employees to link \"Personal\" and \"Employee Business\" LastPass accounts under a single master password.[[1]](#cite_note-:0-2): 15 ## Attack timeline [[edit](/w/index.php?title=2022",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "In a second incident, a senior DevOps engineer's personal computer was compromised, and the attacker used a keystroke logger to obtain the employee's credentials and access an internal vault holding further keys.",
+    "source_url": "https://en.wikipedia.org/wiki/2022_LastPass_data_breach",
+    "passage": "In the first incident, an attacker accessed parts of LastPass's development environment and exfiltrated source code repositories and technical documentation, including an encrypted copy of the key used to protect backups of customer data stored in [Amazon S3](https://en.wikipedia.org/wiki/Amazon_S3 \"Amazon S3\"). In a second incident, a senior DevOps engineer's personal computer was compromised, and the attacker used a keystroke logger to obtain the employee's credentials and access an internal vault holding further keys. [\u2026] At the time of the incidents, LastPass operated its production environment in physical data centres and used [Amazon S3](https://en.wikipedia.org/wiki/Amazon_S3 \"Amazon S3\") \"buckets\" for backup storage; it secured those backups using server-side encryption with a SSE-C key.[[a]](#cite_note-1) The SSE-C key was always encrypted when not in use, and only four people at LastPass were able to decrypt the key itself.[[1]](#cite_note-:0-2): 15 During the relevant period, LastPass permitted employees to link \"Personal\" and \"Employee Business\" LastPass accounts under a single master password.[[1]](#cite_note-:0-2): 15 ## Attack timeline [[edit](/w/index.php?title=2022",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass acknowledged on December 22, 2022, that customer data was compromised as a result of a cyberattack, stating that an unauthorized party, using information obtained in the August 2022 incident, gained access to certain elements of their customers\u2019 information.",
+    "source_url": "https://www.cybersecuritydive.com/news/lastpass-cyberattack-timeline/643958",
+    "passage": "#### How the cyberattack at LastPass unfolded A threat actor compromised a LastPass software engineer's corporate laptop to gain access to a cloud-based development environment. The adversary [stole source code](https://www.cybersecuritydive.com/news/lastpass-breach-password-manager/630624/), proprietary technical documentation and some of the company\u2019s internal system secrets. The threat actor used technical documentation and source code to exfiltrate 14 of approximately 200 source-code repositories related to components of the LastPass service. [\u2026] In the follow-on compromise, the threat actor used information exfiltrated from the initial breach to initiate a more widespread and damaging attack. LastPass engaged with incident response firm Mandiant. The threat actor copied a backup of LastPass\u2019 customer database containing unencrypted account information, related metadata and application configuration options such as multifactor authentication. Toubba said the breach was contained and LastPass saw no further evidence of unauthorized activity. [\u2026] 26, 2022, we have not seen any threat actor activity.\u201d The password manager, for the first time, [acknowledged customer data was compro",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "In December 2022, LastPass notified their users about a security incident that put passwords stored in LastPass at risk.",
+    "source_url": "https://support.ti.davidson.edu/hc/en-us/articles/11628964632983-LastPass-Security-Incident-Overview-Next-Steps",
+    "passage": "[![Davidson T&I logo](/hc/theming_assets/01HZPHC67CYYXSYBAA8JSZWB42) ![Davidson T&I logo](/hc/theming_assets/01HZPHC6BAJMKVDXXQ2E0NQ76M)](/hc/en-us \"Home\") [Submit a request](/hc/en-us/requests/new) [Sign in](/hc/en-us/signin?return_to=https%3A%2F%2Fsupport.ti.davidson.edu%2Fhc%2Fen-us%2Farticles%2F11628964632983-LastPass-Security-Incident-Overview-Next-Steps \"Opens a dialog\") 1. [Davidson Technology & Innovation](/hc/en-us) 2. [Information Security](/hc/en-us/categories/4417874554903-Information-Security) 3. [\u2026] [Secure Computing](/hc/en-us/sections/4418108749079-Secure-Computing) # LastPass Security Incident Overview & Next Steps > LastPass is a password management tool used to store, share, and manage passwords used by some departments and individuals at Davidson. On December 22, 2022, [LastPass informed customers](https://blog.lastpass.com/2022/12/notice-of-recent-security-incident/) about a recent security breach. This article provides more information about that security breach, and next steps for securing your information. ### About the LastPass Cybersecurity Incident In December 2022, LastPass notified their users about a security incident that put passwords stored in LastP",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "In June 2015, the LastPass team discovered and halted suspicious activity on their network, which revealed that LastPass account email addresses, password reminders, server per user salts, and authentication hashes were compromised.",
+    "source_url": "https://en.wikipedia.org/wiki/LastPass",
+    "passage": "Although the company stated that no evidence of data exfiltration was found, it required all users to reset their master passwords as a precaution. According to LastPass, encrypted user vault data was not compromised.[[38]](#cite_note-LP2011-39)[[39]](#cite_note-TC2011-40) ### 2015 security breach [[edit](/w/index.php?title=LastPass&action=edit&section=6 \"Edit section: 2015 security breach\")] In June 2015, the LastPass team discovered and halted suspicious activity on their network. [\u2026] Their investigation revealed that LastPass account email addresses, password reminders, server per user salts, and authentication hashes were compromised; however, encrypted user vault data was not affected.[[40]](#cite_note-41) ### 2017 security vulnerabilities in the Android app [[edit](/w/index.php?title=LastPass&action=edit&section=7 \"Edit section: 2017 security vulnerabilities in the Android app\")] A 2017 analysis by the [Fraunhofer-Institut f\u00fcr Sichere Informationstechnologie](https://de.wikipedia.org/wiki/Fraunhofer-Institut%20f\u00fcr%20Sichere%20Informationstechnologie \"de:Fraunhofer-Institut f\u00fcr Sichere Informationstechnologie\") (SIT) identified several security flaws in multiple Android passwo",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass processes personal data via equipment and resources located in the United States and other locations throughout the world.",
+    "source_url": "https://www.lastpass.com/legal-center/partner-sales-terms",
+    "passage": "You can visit our Trust & Privacy Center ([https://www.lastpass.com/trust-center](/trust-center)) to review additional information about our comprehensive privacy program, including third-party privacy frameworks, privacy policies, applicable data processing locations, and Sub-Processor Disclosures. You understand that when using our Services or interacting with our websites your personal data may be processed via equipment and resources located in the United States and other locations throughout the world. When providing our Services, we act as a data processor, service provider, or the equivalent construct. [\u2026] To review and execute our Data Processing Addendum (\u201cDPA\u201d), please visit [https://www.lastpass.com/legal-center/data-processing-addendum](/legal-center/data-processing-addendum). ##### 4. COMPLIANCE WITH LAWS When using the Services, you agree to comply with all applicable laws, rules and regulations including, but not limited to, export, privacy, and data protection laws and regulations. You acknowledge that the Services are subject to export control and trade sanctions laws in the United States and other countries. You and your users may not access, use, export, or discl",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass processes personal data via equipment and resources located in the United States and other locations throughout the world.",
+    "source_url": "https://www.lastpass.com/legal-center/terms-of-service/business",
+    "passage": "You can visit our Trust & Privacy Center ([https://www.lastpass.com/trust-center](/trust-center)) to review additional information about our comprehensive privacy program, including third-party privacy frameworks, privacy policies, applicable data processing locations, and Sub-Processor Disclosures. You understand that when using our Services or interacting with our websites your personal data may be processed via equipment and resources located in the United States and other locations throughout the world. When providing our Services, we act as a data processor, service provider, or the equivalent construct. [\u2026] To review and execute our Data Processing Addendum (\u201c**DPA**\u201d), please visit [https://www.lastpass.com/legal-center/data-processing-addendum.](/legal-center/data-processing-addendum) ##### 4.3. Your Accounts You are solely responsible for: (i) all access and use of the Services by you and your users; (ii) maintaining a lawful basis for the collection, use, processing, and transfer of Content; (iii) providing notices or obtaining consent as legally required in connection with your use of the Services; and (iv) the security of your master password. [\u2026] trade sanctions or oth",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass's default location for Vault data is the United States.",
+    "source_url": "https://community.lastpass.com/discussion/4049/i-see-one-of-the-lastpass-web-pages-that-states-the-the-password-vault-is-in-appdata-and-another-page-that-says-it-is-kept-in-the-united-states-which-is-it-where-is-the-vault-actually-kept",
+    "passage": "The default location for Vault data is the United States. In some countries that require data to be kept within their borders, LastPass may",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass utilizes Amazon Web Services via US-East-1 (Virginia) and US-East-2 (Ohio) for Vault/Customer Content hosting in the United States.",
+    "source_url": "https://www.lastpass.com/-/media/50dd502f16c34e99ad3ba7ea031d55ab.pdf",
+    "passage": "1 LastPass Sub-Processors v.2.3 LastPass Sub-Processors Last Updated April 2025 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) and US-East-2 (Ohio) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) EU-West-2 (United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] Entity Name Service Type Hosting Location Akamai Technologies, Inc. Global Traffic Management (GTM) and DDoS protection service",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass utilizes Amazon Web Services via US-East-1 (Virginia) for Unified Admin Console hosting in the United States.",
+    "source_url": "https://www.lastpass.com/-/media/50dd502f16c34e99ad3ba7ea031d55ab.pdf",
+    "passage": "1 LastPass Sub-Processors v.2.3 LastPass Sub-Processors Last Updated April 2025 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) and US-East-2 (Ohio) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) EU-West-2 (United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] Entity Name Service Type Hosting Location Akamai Technologies, Inc. Global Traffic Management (GTM) and DDoS protection service",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass utilizes Microsoft Azure US-East (Virginia) and US-West (California) for Identity Users hosting in the United States.",
+    "source_url": "https://www.lastpass.com/-/media/50dd502f16c34e99ad3ba7ea031d55ab.pdf",
+    "passage": "1 LastPass Sub-Processors v.2.3 LastPass Sub-Processors Last Updated April 2025 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) and US-East-2 (Ohio) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) EU-West-2 (United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] Entity Name Service Type Hosting Location Akamai Technologies, Inc. Global Traffic Management (GTM) and DDoS protection service",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass utilizes Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) and EU-West-2 (United Kingdom) for Vault/Customer Content hosting in Europe.",
+    "source_url": "https://www.lastpass.com/-/media/50dd502f16c34e99ad3ba7ea031d55ab.pdf",
+    "passage": "1 LastPass Sub-Processors v.2.3 LastPass Sub-Processors Last Updated April 2025 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) and US-East-2 (Ohio) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) EU-West-2 (United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] Entity Name Service Type Hosting Location Akamai Technologies, Inc. Global Traffic Management (GTM) and DDoS protection service",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass utilizes Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) for Vault/Customer Content hosting in APAC.",
+    "source_url": "https://www.lastpass.com/-/media/50dd502f16c34e99ad3ba7ea031d55ab.pdf",
+    "passage": "1 LastPass Sub-Processors v.2.3 LastPass Sub-Processors Last Updated April 2025 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) and US-East-2 (Ohio) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) EU-West-2 (United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] Entity Name Service Type Hosting Location Akamai Technologies, Inc. Global Traffic Management (GTM) and DDoS protection service",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass utilizes Amazon Web Services via CA-Central-1 for Vault/Customer Content hosting in Canada.",
+    "source_url": "https://www.lastpass.com/-/media/50dd502f16c34e99ad3ba7ea031d55ab.pdf",
+    "passage": "1 LastPass Sub-Processors v.2.3 LastPass Sub-Processors Last Updated April 2025 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) and US-East-2 (Ohio) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) EU-West-2 (United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] Entity Name Service Type Hosting Location Akamai Technologies, Inc. Global Traffic Management (GTM) and DDoS protection service",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass uses Akamai Technologies, Inc. for Global Traffic Management (GTM) and DDoS protection services worldwide, though no Customer Content/Vault Data is stored by Akamai.",
+    "source_url": "https://www.lastpass.com/-/media/50dd502f16c34e99ad3ba7ea031d55ab.pdf",
+    "passage": "1 LastPass Sub-Processors v.2.3 LastPass Sub-Processors Last Updated April 2025 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) and US-East-2 (Ohio) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) EU-West-2 (United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] Entity Name Service Type Hosting Location Akamai Technologies, Inc. Global Traffic Management (GTM) and DDoS protection service",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass uses Amplitude Inc. for Product Performance Analytics in the United States.",
+    "source_url": "https://www.lastpass.com/-/media/50dd502f16c34e99ad3ba7ea031d55ab.pdf",
+    "passage": "1 LastPass Sub-Processors v.2.3 LastPass Sub-Processors Last Updated April 2025 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) and US-East-2 (Ohio) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) EU-West-2 (United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] Entity Name Service Type Hosting Location Akamai Technologies, Inc. Global Traffic Management (GTM) and DDoS protection service",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass uses CyberSource Corporation for Export compliance and Fraud Prevention System in the United States.",
+    "source_url": "https://www.lastpass.com/-/media/50dd502f16c34e99ad3ba7ea031d55ab.pdf",
+    "passage": "1 LastPass Sub-Processors v.2.3 LastPass Sub-Processors Last Updated April 2025 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) and US-East-2 (Ohio) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) EU-West-2 (United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] Entity Name Service Type Hosting Location Akamai Technologies, Inc. Global Traffic Management (GTM) and DDoS protection service",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass uses DataBricks, Inc. for Cloud Data Platform in the United States.",
+    "source_url": "https://www.lastpass.com/-/media/50dd502f16c34e99ad3ba7ea031d55ab.pdf",
+    "passage": "1 LastPass Sub-Processors v.2.3 LastPass Sub-Processors Last Updated April 2025 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) and US-East-2 (Ohio) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) EU-West-2 (United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] Entity Name Service Type Hosting Location Akamai Technologies, Inc. Global Traffic Management (GTM) and DDoS protection service",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass uses DataDog, Inc. for Observability platform used for cloud application monitoring, logging, and analytics in the United States.",
+    "source_url": "https://www.lastpass.com/-/media/50dd502f16c34e99ad3ba7ea031d55ab.pdf",
+    "passage": "1 LastPass Sub-Processors v.2.3 LastPass Sub-Processors Last Updated April 2025 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) and US-East-2 (Ohio) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) EU-West-2 (United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] Entity Name Service Type Hosting Location Akamai Technologies, Inc. Global Traffic Management (GTM) and DDoS protection service",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass uses PasswordPing, Ltd. for Customer Support and Communication in the United States.",
+    "source_url": "https://www.lastpass.com/-/media/50dd502f16c34e99ad3ba7ea031d55ab.pdf",
+    "passage": "1 LastPass Sub-Processors v.2.3 LastPass Sub-Processors Last Updated April 2025 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) and US-East-2 (Ohio) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) EU-West-2 (United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] Entity Name Service Type Hosting Location Akamai Technologies, Inc. Global Traffic Management (GTM) and DDoS protection service",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass uses Stripe, Inc. for Payment Processing in the United States.",
+    "source_url": "https://www.lastpass.com/-/media/50dd502f16c34e99ad3ba7ea031d55ab.pdf",
+    "passage": "1 LastPass Sub-Processors v.2.3 LastPass Sub-Processors Last Updated April 2025 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) and US-East-2 (Ohio) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) EU-West-2 (United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] Entity Name Service Type Hosting Location Akamai Technologies, Inc. Global Traffic Management (GTM) and DDoS protection service",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass uses Enzoic for user credential security web-monitoring (dark-web-monitoring) in the United States, Ireland, and Japan, if Dark Web Monitoring is enabled.",
+    "source_url": "https://www.lastpass.com/-/media/4a8e0540ad8a44908845d3c34817193f.pdf",
+    "passage": "v.2.0 | December 2023 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) Equinix (Germany and United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] User credential security web-United States, LastPass Sub-Processors 2 (Enzoic) [If Dark Web Monitoring is Enabled] monitoring (known as dark-web-monitoring) For more information on dark web monito",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass uses Pendo.io, Inc. for in-product messaging, user experience guide and onboarding platform in the United States, United Kingdom, and Israel.",
+    "source_url": "https://www.lastpass.com/-/media/4a8e0540ad8a44908845d3c34817193f.pdf",
+    "passage": "v.2.0 | December 2023 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) Equinix (Germany and United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] User credential security web-United States, LastPass Sub-Processors 2 (Enzoic) [If Dark Web Monitoring is Enabled] monitoring (known as dark-web-monitoring) For more information on dark web monito",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass uses Segment.io, Inc. for Data Governance Control Platform in the United States.",
+    "source_url": "https://www.lastpass.com/-/media/4a8e0540ad8a44908845d3c34817193f.pdf",
+    "passage": "v.2.0 | December 2023 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) Equinix (Germany and United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] User credential security web-United States, LastPass Sub-Processors 2 (Enzoic) [If Dark Web Monitoring is Enabled] monitoring (known as dark-web-monitoring) For more information on dark web monito",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass uses Splunk, Inc. for Security monitoring, logging, and analytics in the United States.",
+    "source_url": "https://www.lastpass.com/-/media/4a8e0540ad8a44908845d3c34817193f.pdf",
+    "passage": "v.2.0 | December 2023 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) Equinix (Germany and United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] User credential security web-United States, LastPass Sub-Processors 2 (Enzoic) [If Dark Web Monitoring is Enabled] monitoring (known as dark-web-monitoring) For more information on dark web monito",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass uses Twilio, Inc. for Accounts Receivable Customer Relationship Management System in the United States.",
+    "source_url": "https://www.lastpass.com/-/media/4a8e0540ad8a44908845d3c34817193f.pdf",
+    "passage": "v.2.0 | December 2023 LastPass Services Data Hosting Locations Data Type Entity Name Hosting Type Hosting Location Vault/Customer Content Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Unified Admin Console Amazon Web Services via US-East-1 (Virginia) Cloud hosting Provider (US only) United States (Default) Identity Users Microsoft Azure US-East (Virginia) and US-West (California) Cloud hosting provider United States (Default) Vault/Customer Content Amazon Web Services via EU-West-1 (Ireland) and EU-Central-1 (Germany) Equinix (Germany and United Kingdom) Cloud hosting provider Europe Vault/Customer Content Amazon Web Services via AP-South-1 (India), AP-Southeast-1 (Singapore) and AP-Southeast-2 (Australia) Cloud hosting provider APAC Vault/Customer Content Amazon Web Services via CA-Central-1 Cloud hosting provider Canada LastPass Services Third Party Sub-Processors These Sub-processors are used to help deliver LastPass Services. [\u2026] User credential security web-United States, LastPass Sub-Processors 2 (Enzoic) [If Dark Web Monitoring is Enabled] monitoring (known as dark-web-monitoring) For more information on dark web monito",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass has expanded its global data footprint into India to better serve the APAC market.",
+    "source_url": "https://blog.lastpass.com/posts/lastpass-expands-data-storage-to-india",
+    "passage": "LastPass is proud to announce that we have expanded our global data footprint into India to better serve the APAC market.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "agent",
+    "vendor": "LastPass",
+    "claim": "LastPass servers are located in the US and in Europe, and users can choose which servers they use.",
+    "source_url": "https://community.spiceworks.com/t/data-center-location/585316",
+    "passage": "LastPass servers are located in the US and in Europe. You can choose which servers you use. See this FAQ for details:",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "baseline",
+    "vendor": "LastPass",
+    "claim": "LastPass holds several third-party security certifications and attestations, including ISO/IEC 27701, ISO 27001, SOC 2 Type II, SOC 3, BSI C5, TRUSTe, and FIDO2 Server Certification.",
+    "source_url": "https://www.lastpass.com/company/newsroom/f41f6e25-b4ee-4b2c-b70c-b3a540d84271",
+    "passage": "ISO/IEC 27701 is the latest in LastPass\u2019s expansive list of security and privacy certifications, including FIDO2 Server Certification , SOC 2 and SOC 3, and BSI C5 . Details are listed in the LastPass Trust Center , which provides up-to-date information on LastPass systems and access to its latest certifications, policies, and security documentation.\n\nMore information on ISO/IEC 27701 can be found at the International Standards Organization website . [...] The ISO 27701 certification validates that LastPass has implemented a privacy program that adheres to best practices and principles demanded by this international standard to manage privacy risks and protect personal data. For LastPass customers, this certification demonstrates LastPass\u2019s continued commitment to data protection, transparency, trust, and data handling practices. [...] BOSTON--(BUSINESS WIRE)--  LastPass , a leader in password and identity management solutions, today announced its achievement of ISO 27701 certification for privacy information management. LastPass was the first password manager on the market to gain this certification, in May 2024. This achievement builds upon the company\u2019s robust privacy and securi",
+    "machine_verdict": "not_entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "baseline",
+    "vendor": "LastPass",
+    "claim": "LastPass holds several third-party security certifications and attestations, including ISO/IEC 27701, ISO 27001, SOC 2 Type II, SOC 3, BSI C5, TRUSTe, and FIDO2 Server Certification.",
+    "source_url": "https://www.lastpass.com/security",
+    "passage": "icon-s-light_illustrative_compliance-svg\n\n### Industry-tested compliance\n\nLastPass holds third-party security certifications like ISO 27001, SOC2 Type II, SOC3, BSI C5, TRUSTe, and more.\n\nicon-s-light_illustrative_audit-svg\n\n### Regular expert security audits\n\nLastPass employs trusted, world-class security organizations to conduct routine audits and testing of the LastPass service and infrastructure.\n\nicon-s-light_illustrative_bug-svg\n\n### Bug bounty program [...] Learn the basics of cybersecurity education and terms so you can prevent and respond to security incidents.\n\nRead the article\n\nicon-s-light_illustrative_secured-doc-compliance-svg\n\n### Compliance Center\n\nView the latest LastPass system statuses, certifications, privacy policies, and other security documentation.\u200b\n\nVisit Compliance Center\n\n## Stringent security meets global compliance. You get that and more with LastPass.\n\nStart Business trial Contact sales [...] LastPass uses AES-256 data encryption plus PBKDF2 hashing with SHA-256 salting.\n\nicon-s-light_illustrative_private-design-svg\n\n### Private by design\n\nLastPass maintains a global data privacy program designed to protect the data of customers, users, and end-users.\n",
+    "machine_verdict": "not_entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "baseline",
+    "vendor": "LastPass",
+    "claim": "LastPass holds several third-party security certifications and attestations, including ISO/IEC 27701, ISO 27001, SOC 2 Type II, SOC 3, BSI C5, TRUSTe, and FIDO2 Server Certification.",
+    "source_url": "https://fidoalliance.org/company/lastpass",
+    "passage": "LastPass has achieved FIDO2 certification of its servers, making it the first password manager to achieve this certification.\n\n## Solutions\n\nLastPass offers a variety of free and paid subscription plans for both consumers and businesses.\n\nConsumer Plans: LastPass Free, LastPass Premium, LastPass Families [...] LastPass is an award-winning password manager which helps users organize and protect their online lives. As a leader in the password management landscape, LastPass enables customers and businesses of all sizes to reduce their reliance on passwords, embrace a passwordless future, and ultimately mitigate risks associated with human behavior. For millions of customers and more than 100,000 businesses, LastPass makes it easy to create, store, manage, and share sensitive data \u2013 from passwords to [...] Skip to content\n\nFIDO Alliance\n\nPasskey Central\n\nAuthenticate Conference\n\n\n\nFIDO Alliance\n\n Device Onboarding\n Certification\n Resources\n Membership\n Search\u2026\n\nPasskey Central\n\nAuthenticate Conference\n\nLanguage\n\n+ wpml-ls-flag English\n+ wpml-ls-flag \u7b80\u4f53\u4e2d\u6587\n+ wpml-ls-flag \u65e5\u672c\u8a9e\n+ wpml-ls-flag \ud55c\uad6d\uc5b4\n\n# LastPass\n\n## Company Information",
+    "machine_verdict": "not_entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "baseline",
+    "vendor": "LastPass",
+    "claim": "LastPass experienced a security incident on June 12, 2024, where an unauthorized actor obtained OAuth tokens from Klue, a third-party platform used by LastPass.",
+    "source_url": "https://news.ycombinator.com/item?id=48671468",
+    "passage": "the developer of your password manager to have good security practices and any sign to the contrary is concerning even when it is not directly related to the core product. Of course security is not about absolutes and mistakes and incidents do happen \u2013 what counts is how, how is dealt with them and if they repeat. In the case of LastPass history, including this breach, shows that they have atrocious security and you do not want to let your credentials get any millimeter closer to them than you [...] \u201cOn June 12th, LastPass was made aware of an incident that occurred at Klue (klue.com), a third-party market intelligence platform utilized by our go-to-market teams, which integrates with our Salesforce and Gong systems,\u201d LastPass says.\n\n\"We immediately launched an investigation and learned that, as part of this incident, an unauthorized actor was able to obtain OAuth tokens Klue held for many of its customers, including LastPass.\u201d [...] \u201cOn June 12th, LastPass was made aware of an incident that occurred at Klue (klue.com), a third-party market intelligence platform utilized by our go-to-market teams, which integrates with our Salesforce and Gong systems,\u201d LastPass says.\n\n\"We immediate",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "baseline",
+    "vendor": "LastPass",
+    "claim": "LastPass disclosed a security incident in December 2022, where an unauthorized party accessed and exfiltrated customer data, including unencrypted account information and encrypted vault data, by targeting a DevOps engineer's home computer.",
+    "source_url": "https://www.upguard.com/blog/lastpass-vulnerability-and-future-of-password-security",
+    "passage": "Additional critical developments are announced, labeled as \u201cIncident 2.\u201d LastPass reveals that the cybercriminals gained access to the home computer of a senior DevOps engineer by exploiting a security vulnerability in their third-party media software package (suspected to be Plex media software). This employee was targeted because they had access to decryption keys needed to access the vaults of compromised LastPass accounts (mentioned in the previous update). [...] LastPass\u2019 primary flaw wasn\u2019t that its primary security controls failed to prevent a data breach (although such cybersecurity capability is expected from a Password Manager); it was its vague and drawn-out method of alerting impacted customers. In total, LastPass published five different updates about its security incident, and each time it felt like LastPass failed to be completely blunt about the incident\u2019s degree of impact - as evidenced by LastPass hiding the inflammatory details about how [...] > \u201cWe have determined that an unauthorized party, using information obtained in the August 2022 incident, was able to gain access to certain elements of our customers\u2019 information. Our customers\u2019 passwords remain safely enc",
+    "machine_verdict": "not_entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "baseline",
+    "vendor": "LastPass",
+    "claim": "LastPass disclosed a security incident in December 2022, where an unauthorized party accessed and exfiltrated customer data, including unencrypted account information and encrypted vault data, by targeting a DevOps engineer's home computer.",
+    "source_url": "https://support.ti.davidson.edu/hc/en-us/articles/11628964632983-LastPass-Security-Incident-Overview-Next-Steps",
+    "passage": "> LastPass is a password management tool used to store, share, and manage passwords used by some departments and individuals at Davidson. On December 22, 2022, LastPass informed customers about a recent security breach. This article provides more information about that security breach, and next steps for securing your information.\n\n### About the LastPass Cybersecurity Incident [...] In December 2022, LastPass notified their users about a security incident that put passwords stored in LastPass at risk. Since some departments and individuals at Davidson College use LastPass to protect their secure information, we wanted to make sure you were aware of this incident, how it may affect you, and next steps affected users should take. [...] During this event, a bad actor was able to download a copy of a LastPass backup that included unencrypted customer account information (name, email, etc.), as well as encrypted data from customer vaults including website usernames and passwords, secure notes, and form data.",
+    "machine_verdict": "not_entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "baseline",
+    "vendor": "LastPass",
+    "claim": "LastPass disclosed a security incident in December 2022, where an unauthorized party accessed and exfiltrated customer data, including unencrypted account information and encrypted vault data, by targeting a DevOps engineer's home computer.",
+    "source_url": "https://www.cybersecuritydive.com/news/lastpass-cyberattack-timeline/643958",
+    "passage": "The LastPass security team was alerted to the malicious activity. The company refers to this as the \u201cfirst incident,\u201d which was immediately followed by a \u201csecond incident\u201d the company says began Aug. 12.   \n  \nIn the follow-on compromise, the threat actor used information exfiltrated from the initial breach to initiate a more widespread and damaging attack.\n\nLastPass engaged with incident response firm Mandiant. [...] LastPass, more than six months after the initial incident, linked the threat actor from the August breach to the long- lasting subsequent attack.  \n  \nThe adversary used information stolen in the initial breach, information from a third-party breach and a remote code execution vulnerability on a DevOps engineer\u2019s home computer to gain access to multiple LastPass resources and backups, the company said in an advisory on its support site. [...] LastPass completed its investigation into the first incident with assistance from Mandiant.  \n  \nThe company said the threat actor was inside its development system for four days and it contained the breach.  \n  \n\u201cThere is no evidence of any threat actor activity beyond the established timeline,\u201d Toubba said in the updated blog p",
+    "machine_verdict": "not_entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "baseline",
+    "vendor": "LastPass",
+    "claim": "LastPass has a history of security incidents, including events in 2011, 2015, 2017, 2021, and 2022, which have led to scrutiny of its security practices.",
+    "source_url": "https://en.wikipedia.org/wiki/LastPass",
+    "passage": "LastPass has faced ongoing scrutiny regarding its security practices and incident response over the years. Several independent analyses and reported breaches have raised concerns about how the company handles user data, mitigates vulnerabilities, and communicates risks to its customers. While LastPass employs industry-standard encryption to protect stored credentials, past security incidents and research findings have prompted debate over the platform\u2019s overall reliability and its approach to [...] The breach prompted litigation and regulatory scrutiny, including a monetary penalty issued by the ICO in November 2025 against LastPass UK Ltd for failures to implement appropriate technical and organisational measures affecting over one million UK data subjects. The breach led to further incidents because stolen vault backups can be subjected to offline cracking attempts: in 2025 LastPass settled a class action lawsuit in the amount of $24.5 million for losses incurred by customers whose [...] 1 Overview\n 2 History\n 3 Reception\n 4 Security incidents\n  + 4.1 2011 security incident\n  + 4.2 2015 security breach\n  + 4.3 2017 security vulnerabilities in the Android app\n  + 4.4 2021 third-pa",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "baseline",
+    "vendor": "LastPass",
+    "claim": "LastPass uses its affiliates and third-party subprocessors to provide and operate its services.",
+    "source_url": "https://www.lastpass.com/-/media/48bd9b1ebc5d49f88ba3c91362243d9b.pdf",
+    "passage": "Customer acknowledges and agrees that: (a) LastPass Affiliates may be retained as Sub-processors; and (b) LastPass may engage third-party Sub-processors in connection with the provision and operation of the Services. Prior to engaging any Sub-processors (whether a third party or LastPass Affiliate), LastPass shall carry out appropriate due diligence on the Sub-processor and enter into a written agreement with each Sub-processor which provides for sufficient guarantees from the Sub-processor to [...] (also accessible via  LastPass may remove, replace or appoint suitable and reliable further Sub-processors at their own discretion in accordance with this Section 5.2 and Section 5.3. LastPass\u2019 most up-to-date list of Sub-processors utilized for the Services and their geographic location (\u201cSub-processor Disclosure\u201d) may be found at the preceding link in this Section 5.2. LastPass shall inform Customer of any new Sub-processors by providing an updated disclosure on its Trust and Privacy Center [...] and Organizational Measures documentation, and to the extent further instructed by Customer through its use of the Services. Retention of Personal Data LastPass will Process and retain Person",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "baseline",
+    "vendor": "LastPass",
+    "claim": "LastPass uses its affiliates and third-party subprocessors to provide and operate its services.",
+    "source_url": "https://www.lastpass.com/trust-center/privacy",
+    "passage": "LastPass has implemented and maintains appropriate technical and organizational measures to preserve data confidentiality, integrity, and availability. This includes detailed information regarding LastPass\u2019 zero-knowledge encryption capabilities and other comprehensive security measures.\n\nSub-processor disclosures\n\nTo provide and operate services, LastPass engages with first and third-party sub-processors.\n\nGuidelines for law enforcement requests [...] We will not disclose customer information unless presented with a valid warrant, subpoena, court order, or equivalent legal process. Additionally, LastPass may attempt to narrow requests that it deems excessively broad, request further clarification if the nature of the investigation is ambiguous, or contest the request for other reasons.\n\n#### Updates to our sub-processors and technical organizational measures\n\nSubscribe for Updates\n\nicon-s-light_illustrative_trust-center-svg [...] ## Privacy control, procedures, disclosures\n\nProcessing locations\n\nLastPass aims to provide our global user base with the best possible experience. To help ensure sufficient service availability, uptime, and redundancy, we deploy a combination of geograph",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "baseline",
+    "vendor": "LastPass",
+    "claim": "LastPass stores and processes customer data in geographically distributed physical co-location facilities and cloud hosting providers to ensure service availability, uptime, and redundancy.",
+    "source_url": "https://www.lastpass.com/trust-center/privacy",
+    "passage": "LastPass has implemented and maintains appropriate technical and organizational measures to preserve data confidentiality, integrity, and availability. This includes detailed information regarding LastPass\u2019 zero-knowledge encryption capabilities and other comprehensive security measures.\n\nSub-processor disclosures\n\nTo provide and operate services, LastPass engages with first and third-party sub-processors.\n\nGuidelines for law enforcement requests [...] We will not disclose customer information unless presented with a valid warrant, subpoena, court order, or equivalent legal process. Additionally, LastPass may attempt to narrow requests that it deems excessively broad, request further clarification if the nature of the investigation is ambiguous, or contest the request for other reasons.\n\n#### Updates to our sub-processors and technical organizational measures\n\nSubscribe for Updates\n\nicon-s-light_illustrative_trust-center-svg [...] ## Privacy control, procedures, disclosures\n\nProcessing locations\n\nLastPass aims to provide our global user base with the best possible experience. To help ensure sufficient service availability, uptime, and redundancy, we deploy a combination of geograph",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "baseline",
+    "vendor": "LastPass",
+    "claim": "LastPass has expanded its global data footprint to include local storage in India, allowing LastPass Enterprise and Identity customers to store vault data in that region.",
+    "source_url": "https://blog.lastpass.com/posts/lastpass-expands-data-storage-to-india",
+    "passage": "LastPass Enterprise and Identity customers will continue to enjoy the all the same features and benefits and can now store vault data in region (on and offline) with zero knowledge, access account deletion, and replicate and export data. Knowing where data resides is very important and having it stored in region will help businesses implement improved security posture throughout their organization. [...] By subscribing, you agree to receive marketing communications regarding industry news and research, educational resources, and LastPass products and services. The processing of your personal data in accordance with the LastPass  Privacy Policy. You can unsubscribe from marketing communications at any time.\n\nExpanded Data Storage in India Provides Flexible, Secure and Local Data Residency to Customers [...] LastPass is proud to announce that we have expanded our global data footprint into India to better serve the APAC market. To support increasing privacy requirements and to improve our customer\u2019s experience, LastPass will now include local storage in India.",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "baseline",
+    "vendor": "LastPass",
+    "claim": "LastPass maintains an up-to-date list of subprocessors and their geographic locations on its Trust and Privacy Center.",
+    "source_url": "https://www.lastpass.com/-/media/48bd9b1ebc5d49f88ba3c91362243d9b.pdf",
+    "passage": "Customer acknowledges and agrees that: (a) LastPass Affiliates may be retained as Sub-processors; and (b) LastPass may engage third-party Sub-processors in connection with the provision and operation of the Services. Prior to engaging any Sub-processors (whether a third party or LastPass Affiliate), LastPass shall carry out appropriate due diligence on the Sub-processor and enter into a written agreement with each Sub-processor which provides for sufficient guarantees from the Sub-processor to [...] (also accessible via  LastPass may remove, replace or appoint suitable and reliable further Sub-processors at their own discretion in accordance with this Section 5.2 and Section 5.3. LastPass\u2019 most up-to-date list of Sub-processors utilized for the Services and their geographic location (\u201cSub-processor Disclosure\u201d) may be found at the preceding link in this Section 5.2. LastPass shall inform Customer of any new Sub-processors by providing an updated disclosure on its Trust and Privacy Center [...] and Organizational Measures documentation, and to the extent further instructed by Customer through its use of the Services. Retention of Personal Data LastPass will Process and retain Person",
+    "machine_verdict": "entailed",
+    "human_verdict": ""
+  },
+  {
+    "system": "baseline",
+    "vendor": "LastPass",
+    "claim": "LastPass maintains an up-to-date list of subprocessors and their geographic locations on its Trust and Privacy Center.",
+    "source_url": "https://www.lastpass.com/trust-center/privacy",
+    "passage": "LastPass has implemented and maintains appropriate technical and organizational measures to preserve data confidentiality, integrity, and availability. This includes detailed information regarding LastPass\u2019 zero-knowledge encryption capabilities and other comprehensive security measures.\n\nSub-processor disclosures\n\nTo provide and operate services, LastPass engages with first and third-party sub-processors.\n\nGuidelines for law enforcement requests [...] We will not disclose customer information unless presented with a valid warrant, subpoena, court order, or equivalent legal process. Additionally, LastPass may attempt to narrow requests that it deems excessively broad, request further clarification if the nature of the investigation is ambiguous, or contest the request for other reasons.\n\n#### Updates to our sub-processors and technical organizational measures\n\nSubscribe for Updates\n\nicon-s-light_illustrative_trust-center-svg [...] ## Privacy control, procedures, disclosures\n\nProcessing locations\n\nLastPass aims to provide our global user base with the best possible experience. To help ensure sufficient service availability, uptime, and redundancy, we deploy a combination of geograph",
+    "machine_verdict": "not_entailed",
+    "human_verdict": ""
+  }
+]
