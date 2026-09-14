@@ -135,6 +135,40 @@ enough that the seed set cannot tell us whether those 6 removals were correct.
 tokens. For a report attached to a procurement decision that is defensible. For
 casual research it is not.
 
+**The authority tier is two-thirds dead.** Source tier of the 145 supported claims:
+
+| tier | share |
+|---|---|
+| vendor-primary (T1) | 83.4% |
+| authoritative third party (T2) | **0.0%** |
+| secondary (T3) | 16.6% |
+
+T2 never fired — not once across five vendors. The curated list (NVD, CISA,
+Reuters, Krebs, BleepingComputer and the rest) matched no retrieved source. T1 vs
+T3 discriminates; T2 is currently decorative.
+
+This fails precisely where it was designed to matter. Per dimension:
+
+| dimension | T1 | T2 | T3 |
+|---|---|---|---|
+| certifications | 93% | 0% | 7% |
+| **breach_history** | **60%** | **0%** | **40%** |
+| subprocessors | 96% | 0% | 4% |
+
+Breach history is the one dimension where the vendor is *not* a neutral source
+about itself — `retrieve.py` says so in its own docstring as the justification for
+the open pass. Yet 60% of breach claims rest on the vendor's own account and the
+rest on secondary commentary, with nothing independent in between. The design
+anticipated the problem; the implementation does not deliver on it. Fixing it
+means either steering a third pass explicitly at registries and press, or
+accepting that generic queries will not surface them and saying so.
+
+**Coverage ignores source tier.** The judge grades claim substance only, so the
+agent scored a match on `lastpass-breach-aug2022` by citing Wikipedia while the
+gold label is anchored to LastPass's own disclosure. An agent can pass a
+primary-source item with a tertiary source. Tier-weighted coverage is the obvious
+correction and is not implemented.
+
 ### Reading the precision number honestly
 
 For this pipeline, citation precision is ~100% **by construction** — the gate
@@ -232,6 +266,11 @@ Stated because they are real, not to pre-empt criticism.
   industry rather than a failure of our search.
 - **Passage selection is keyword-based.** Embedding-based selection is the obvious
   upgrade and was cut for scope.
+- **The T2 authority tier never fires** (0/145 claims). See Results. Breach
+  history, the dimension most in need of independent corroboration, is 60%
+  sourced from the vendor's own pages.
+- **Coverage is tier-blind.** A primary-source gold item can be satisfied by a
+  Wikipedia citation.
 - **Cost.** The agent is ~25× slower than the baseline per vendor. Enforcement is
   not free, and for this use case that is the right trade — but it is a trade.
 
