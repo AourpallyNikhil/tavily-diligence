@@ -168,26 +168,72 @@ def classify_tier(url: str, vendor_domain: str | None) -> int:
     return ROLE_TIER[classify_role(url, vendor_domain)]
 
 
-_WS = re.compile(r"\s+")
+_WS = re.compile(r"[ \t\r\f\v]+")
+_BLANKS = re.compile(r"\n{2,}")
+
+# Dates are load-bearing in this domain and were being thrown away. A vendor's
+# incident page is typically one long document holding several dated disclosures
+# ("Original post from August 25, 2022", "Update as of December 22, 2022"), and
+# those headings are short and keyword-poor -- exactly what keyword scoring drops.
+#
+# The cost was measured: on a live run the selector pulled the August 2022
+# LastPass disclosure text verbatim but without its date, so the writer could not
+# say *when* it happened and the finding missed. The agent had been getting the
+# date from Wikipedia instead; once provenance steering pushed it onto the
+# vendor's own page, the primary source turned out to be the weaker evidence --
+# not because it says less, but because this function was discarding the part
+# that mattered.
+DATE_RE = re.compile(
+    r"\b("
+    r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}"
+    r"(?:\s*[-\u2013]\s*\d{1,2})?,?\s+\d{4}"
+    r"|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+(?:of\s+)?\d{4}"
+    r"|\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{4}"
+    r"|\d{4}-\d{2}-\d{2}"
+    r")\b",
+    re.IGNORECASE,
+)
 
 
 def _normalise(text: str) -> str:
-    return _WS.sub(" ", text or "").strip()
+    return re.sub(r"\s+", " ", text or "").strip()
 
 
-def _chunk(text: str, size: int = 700) -> list[str]:
-    """Split on sentence-ish boundaries, then group into ~`size`-char windows."""
-    sentences = re.split(r"(?<=[.!?])\s+", text)
-    chunks: list[str] = []
+def _normalise_block(text: str) -> str:
+    """Collapse runs of spaces but keep line structure, so headings survive."""
+    t = _WS.sub(" ", text or "")
+    return _BLANKS.sub("\n", t).strip()
+
+
+def _chunk(text: str, size: int = 700) -> list[tuple[str, str]]:
+    """Group text into ~`size`-char windows, each tagged with the most recent
+    date-bearing heading above it. Returns (heading, chunk_text) pairs."""
+    lines = [ln.strip() for ln in _normalise_block(text).split("\n") if ln.strip()]
+    chunks: list[tuple[str, str]] = []
     buf = ""
-    for s in sentences:
-        if len(buf) + len(s) + 1 > size and buf:
-            chunks.append(buf.strip())
-            buf = s
-        else:
-            buf = f"{buf} {s}".strip()
-    if buf:
-        chunks.append(buf.strip())
+    heading = ""
+
+    def flush() -> None:
+        nonlocal buf
+        if buf.strip():
+            chunks.append((heading, buf.strip()))
+        buf = ""
+
+    for line in lines:
+        # A short line carrying a date reads as a section header, not prose.
+        if len(line) <= 120 and DATE_RE.search(line):
+            flush()
+            heading = line
+            continue
+        for sentence in re.split(r"(?<=[.!?])\s+", line):
+            if not sentence:
+                continue
+            if len(buf) + len(sentence) + 1 > size and buf:
+                flush()
+                buf = sentence
+            else:
+                buf = f"{buf} {sentence}".strip()
+    flush()
     return chunks
 
 
@@ -197,28 +243,34 @@ def select_passages(
     *,
     max_chunks: int = 3,
     max_chars: int = 1800,
+    temporal: bool = False,
 ) -> tuple[str, list[str]]:
     """Return (selected_text, matched_keywords).
 
-    Scores each chunk by how many *distinct* dimension keywords it contains, which
-    favours passages discussing the topic over passages that repeat one term. Ties
-    break toward earlier chunks. Selected chunks are re-emitted in document order
-    so the passage still reads coherently.
+    Scores each chunk by how many *distinct* dimension keywords it contains,
+    which favours passages discussing the topic over passages repeating one term.
+    When `temporal`, chunks carrying a date are boosted and every chunk is
+    prefixed with its section heading, so the date travels with the claim.
     """
-    text = _normalise(text)
-    if not text:
+    if not (text or "").strip():
         return "", []
 
     chunks = _chunk(text)
-    scored: list[tuple[int, int, int, set[str]]] = []  # (-score, index, len, hits)
-    for i, c in enumerate(chunks):
-        low = c.lower()
+    if not chunks:
+        return "", []
+
+    scored: list[tuple[int, int, set[str]]] = []  # (-score, index, hits)
+    for i, (heading, body) in enumerate(chunks):
+        low = body.lower()
         hits = {k for k in keywords if k in low}
-        if hits:
-            scored.append((-len(hits), i, len(c), hits))
+        score = len(hits)
+        if temporal and (DATE_RE.search(body) or DATE_RE.search(heading)):
+            score += 2
+        if score:
+            scored.append((-score, i, hits))
 
     if not scored:
-        return text[:max_chars], []
+        return _normalise(text)[:max_chars], []
 
     scored.sort()
     picked = sorted(scored[:max_chunks], key=lambda t: t[1])
@@ -226,17 +278,26 @@ def select_passages(
     out: list[str] = []
     matched: set[str] = set()
     total = 0
-    for _, i, _, hits in picked:
-        c = chunks[i]
-        if total + len(c) > max_chars:
-            c = c[: max(0, max_chars - total)]
-        if not c:
+    for _, i, hits in picked:
+        heading, body = chunks[i]
+        piece = body
+        # Always carry the section heading on temporal dimensions. Checking
+        # "does the body already contain a date" is not good enough: the
+        # December LastPass section mentions "August of 2022" while referring
+        # back to the earlier incident, so the body has *a* date and it is the
+        # wrong one. The heading is the only reliable anchor for which
+        # disclosure this text belongs to.
+        if temporal and heading and heading not in body:
+            piece = f"[{heading}] {body}"
+        if total + len(piece) > max_chars:
+            piece = piece[: max(0, max_chars - total)]
+        if not piece:
             break
-        out.append(c)
+        out.append(piece)
         matched |= hits
-        total += len(c)
+        total += len(piece)
 
-    return " […] ".join(out), sorted(matched)
+    return " \u2026 ".join(out), sorted(matched)
 
 
 @dataclass
@@ -280,6 +341,9 @@ def build_evidence(
     vendor_domain: str | None,
     keywords: tuple[str, ...],
     rank: int = 0,
+    temporal: bool = False,
+    max_chunks: int = 3,
+    max_chars: int = 1800,
 ) -> Evidence | None:
     """Normalise one Tavily result into an Evidence record.
 
@@ -297,7 +361,13 @@ def build_evidence(
     if not source_text.strip():
         return None
 
-    passage, matched = select_passages(source_text, keywords)
+    passage, matched = select_passages(
+        source_text,
+        keywords,
+        max_chunks=max_chunks,
+        max_chars=max_chars,
+        temporal=temporal,
+    )
     if not passage.strip():
         return None
 

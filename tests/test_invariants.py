@@ -192,6 +192,54 @@ class TestProvenance:
         assert out[0].provenance_ok is False
 
 
+class TestTemporalSelection:
+    """A vendor incident page is one document holding several dated disclosures.
+    Keyword scoring drops the headings that carry the dates, which is how the
+    August 2022 LastPass text reached the writer with no date attached."""
+
+    PAGE = (
+        "Original post from August 25, 2022\n"
+        "We have determined that an unauthorized party gained access to portions of "
+        "the LastPass development environment through a single compromised developer "
+        "account and took portions of source code.\n"
+        "Update as of Thursday, December 22, 2022\n"
+        "An unknown threat actor accessed a cloud-based storage environment leveraging "
+        "information obtained from the incident we previously disclosed in August of 2022.\n"
+    )
+    KW = ("unauthorized access", "threat actor", "incident", "compromised", "breach")
+
+    def test_headings_carry_dates_into_the_passage(self):
+        passage, _ = select_passages(self.PAGE, self.KW, temporal=True, max_chunks=5, max_chars=3200)
+        assert "August 25, 2022" in passage
+        assert "December 22, 2022" in passage
+
+    def test_both_disclosures_survive_selection(self):
+        passage, _ = select_passages(self.PAGE, self.KW, temporal=True, max_chunks=5, max_chars=3200)
+        assert "development environment" in passage
+        assert "cloud-based storage" in passage
+
+    def test_heading_attached_even_when_body_has_another_date(self):
+        # The December section mentions "August of 2022" while referring back to
+        # the earlier incident. A body-has-a-date check would wrongly skip the
+        # heading and mislabel the disclosure.
+        passage, _ = select_passages(self.PAGE, self.KW, temporal=True, max_chunks=5, max_chars=3200)
+        dec = passage[passage.index("cloud-based storage") - 200 : passage.index("cloud-based storage")]
+        assert "December 22, 2022" in dec
+
+    def test_non_temporal_selection_adds_no_headings(self):
+        passage, _ = select_passages(self.PAGE, self.KW, temporal=False)
+        assert "[Original post" not in passage
+
+    def test_temporal_boost_prefers_dated_chunks(self):
+        page = (
+            "Our company values transparency and incident response readiness.\n"
+            "March 3, 2021\n"
+            "An incident affected one customer.\n"
+        )
+        passage, _ = select_passages(page, ("incident",), temporal=True, max_chunks=1, max_chars=900)
+        assert "March 3, 2021" in passage
+
+
 class TestTiering:
     def test_vendor_domain_is_tier_1(self):
         assert classify_tier("https://www.datadoghq.com/security/", "datadoghq.com") == 1

@@ -72,7 +72,7 @@ inversion of the starter. Autonomy is right for open-ended research and wrong fo
 a compliance artefact: a report that takes a different path every run cannot be
 audited, diffed, or evaluated against a fixed question set.
 
-## Three things I got wrong
+## Four things I got wrong
 
 Both are in the git history and the session log. They are the most useful part of
 this submission.
@@ -147,6 +147,34 @@ difference is that a per-dimension role policy is a small, defensible, auditable
 prior, where a 22-domain allowlist was an undefended guess that silently
 classified everything I had not thought of as junk.
 
+**My provenance fix caused a regression, and the regression exposed an older
+bug.** After the role change, all three breach-history items failed that had
+passed before. My first diagnosis — that the new sort tiebreak had reordered the
+pool — was wrong, and checking the data disproved it: the LastPass disclosure was
+sitting at *position 1* of the evidence pool.
+
+The actual cause was in passage selection. That page is 20,977 characters holding
+four dated disclosures. The selector compressed it to 1,810 characters of the
+most keyword-dense chunks, and the dates live in short headings that carry almost
+no keywords. So the writer received the August 2022 incident text verbatim with
+no date attached, and could not say when it happened.
+
+Why it had passed before: the agent was getting the date from **Wikipedia**. Once
+provenance steering pushed it onto the vendor's own disclosure, the primary
+source turned out to be *worse evidence* — not because it says less, but because
+my selector was discarding the part that mattered. Coverage fell and provenance
+rose for the same reason. The regression did not introduce the bug; it revealed
+one that a secondary source had been masking.
+
+The fix makes selection date-aware on temporal dimensions: chunks carry their
+section heading, dated chunks are boosted, and `breach_history` gets a larger
+budget. Two of the three items recovered. The third, Okta's January 2022
+statement, fails for an unrelated reason worth stating separately — it is never
+retrieved at all. Zero 2022-dated Okta pages enter the pool, because the October
+2023 support-system breach dominates every generic query. "Breach history" is
+silently answering "most recent breach", and no amount of better selection fixes
+a document that was never fetched.
+
 ## Evaluation
 
 The central methodological decision: **dataset construction has to follow from the
@@ -192,53 +220,46 @@ defaults) and enforcement (none).
 
 ## What the evaluation actually showed
 
-Five vendors, ten seed items, both systems run against live APIs.
+Five vendors, ten seed items, live APIs, run three times.
 
-| metric | agent | baseline |
-|---|---|---|
-| coverage (positives, n=7) | 71% (5/7) | 57% (4/7) |
-| abstention accuracy (negatives, n=3) | 100% (3/3) | 100% (3/3) |
-| claims presented as supported | 145 | 37 |
-| of those, entailed by their citation | 100% | **78%** |
-| gate yield (claims removed) | 4% | n/a |
-| elapsed / llm calls | 746s / 264 | 45s / 14 |
+| metric | run 1 | run 2 | run 3 |
+|---|---|---|---|
+| coverage — agent | 71% (5/7) | 57% (4/7) | 57% (4/7) |
+| coverage — baseline | 57% (4/7) | 43% (3/7) | 57% (4/7) |
+| citation precision — baseline | 78% | 90% | 91% |
+| provenance — agent / baseline | — | 96% / 75% | 95% / 72% |
+| gate yield | 4% | 5% | 6% |
 
-**One result holds.** 22% of the baseline's claims — presented to the user as
-supported, with a URL attached — are not entailed by the source they themselves
-cite. Roughly one claim in five in a prompt-only system is decorated with a
-citation that does not support it. That is the argument for enforcement, and it
-is measured.
+**The one real, stable result is provenance: +23 points.** 95-96% of this agent's
+supported claims rest on a source whose role is authoritative for that claim
+type, against 72-75% for the baseline. It is the metric the role model was built
+to move, it held across two runs, and it is the only large repeatable gap.
 
-**The hypothesis I built the project around did not show an effect.** Abstention
-accuracy came out 3/3 for both systems. My negative items were too easy: neither
-system came near a pen-test date or a key rotation interval, so both abstained
-trivially and the metric could not discriminate. That is a defect in my seed
-design, not a property of the agent. Discriminating negatives have to be
-*near-misses* — facts adjacent to something findable, where a system under
-pressure to answer would reach for the neighbouring source and overstate it.
-Designing those is the first thing I would do with more time.
+**Coverage shows no difference.** 5, 4, 4 against 4, 3, 4. At n=7 one item is 14
+points and both systems move by an item between runs. I make no coverage claim.
 
-**Coverage is noise.** 5/7 against 4/7 is one item. I report it for completeness
-and draw nothing from it.
+**Abstention showed no effect in any run** — 3/3 for both, three times. That was
+the hypothesis I designed the project around. My negative items are too easy:
+neither system comes near a pen-test date, so both abstain trivially. The fix is
+near-miss negatives, and it is the first thing I would do next.
 
-**The agent lost a case the baseline won,** which is the most interesting single
-row in the run. On `cloudflare-subprocessors-published` the baseline matched and
-the agent did not — because the relevance fix I describe above overcorrected.
-Domain steering plus "every claim must be a fact about the subject" pushed the
-agent to report the *contents* of Cloudflare's subprocessor list instead of the
-meta-fact that a public list exists. Fixing relevance created a blind spot for
-claims *about* disclosure. Both the fix and the regression it caused are in the
-history.
+**I overstated citation precision and am correcting it.** After run 1 I wrote that
+22% of baseline claims were unsupported by their own citation and called it "the
+one solid result". Runs 2 and 3 put it at 10% and 9%. The 78% was an outlier. The
+gap is real but about a third of what I first claimed — and the correction is the
+point: a single run over live web retrieval is not evidence, and I would not have
+known that without running it three times.
 
-**The gate fires rarely** — 4% of emitted claims. Its value is as a guarantee
-rather than a frequent corrector, and at 6 removals the seed set cannot tell us
-whether those removals were correct.
+**Cost — two different claims, which I had been quoting as one.** The gate costs
+~14x the LLM calls (one verifier call per claim per citation), and that is
+inherent to enforcement. The ~10x wall-clock is mostly not: the pipeline is
+entirely synchronous, so 15 searches and ~25 verifications per vendor run
+sequentially. Parallelising both is a thread pool, not a redesign.
 
-**Cost is 16.6x** in wall-clock and 19x in LLM calls. Enforcement is not free.
-
-I am reporting a null result on my own headline metric because the alternative is
-a submission whose numbers cannot be trusted. The measurement was worth doing
-precisely because it disagreed with me.
+I am reporting two null results and one self-correction on my own headline
+metrics, because the alternative is a submission whose numbers cannot be trusted.
+The measurement was worth doing precisely because it disagreed with me three
+separate times.
 
 ## Observability
 
@@ -267,10 +288,11 @@ that were not true before:
 - **Changes are measurable.** A prompt tweak can be shown to help or hurt before
   it reaches a customer.
 
-The cost is real and I have not hidden it: the agent is roughly 25× slower per
-vendor than the prompt-only baseline. Enforcement is not free. For a report that
-gets attached to a procurement decision, it is the right trade; for casual
-research it would not be.
+The cost is real and I have not hidden it, but it needs splitting: enforcement
+costs roughly 19x the LLM calls, which is inherent, while the wall-clock gap is
+mostly that the pipeline is synchronous and I did not parallelise the search and
+verification fan-outs. For a report attached to a procurement decision the call
+cost is the right trade; the latency is simply unfinished work.
 
 ## What I would do next
 

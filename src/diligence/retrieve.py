@@ -110,6 +110,9 @@ class Retriever:
                 vendor_domain=vendor_domain,
                 keywords=dimension.keywords,
                 rank=len(seen_urls),
+                temporal=dimension.temporal,
+                max_chunks=dimension.max_chunks,
+                max_chars=dimension.max_chars,
             )
             if ev is None:
                 continue

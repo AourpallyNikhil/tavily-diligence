@@ -7,7 +7,7 @@
     "system": "agent",
     "matched": true,
     "correct": true,
-    "reason": "Substantially the same as gold claim: unauthorized access via compromised developer account in August 2022, resulting in theft of source code and proprietary technical information."
+    "reason": "Matches gold claim in substance: unauthorized access via compromised developer account in August 2022, access to development environment, source code, and proprietary technical information."
   },
   {
     "item_id": "lastpass-breach-dec2022",
@@ -17,7 +17,7 @@
     "system": "agent",
     "matched": true,
     "correct": true,
-    "reason": "Matches gold claim's assertion about December 2022 breach using August 2022 incident data, including customer vault data access via cloud storage."
+    "reason": "Matches gold claim: December 2022 access to cloud storage using August 2022 breach info, including backup with customer vault data."
   },
   {
     "item_id": "okta-breach-jan2022",
@@ -27,7 +27,7 @@
     "system": "agent",
     "matched": false,
     "correct": false,
-    "reason": "Different incident timeline and entity"
+    "reason": "Different time period and incident"
   },
   {
     "item_id": "slack-soc2-type2",
@@ -37,7 +37,7 @@
     "system": "agent",
     "matched": true,
     "correct": true,
-    "reason": "Directly states Slack holds SOC 2 Type II"
+    "reason": "Direct assertion of SOC 2 Type II"
   },
   {
     "item_id": "slack-iso27001",
@@ -57,7 +57,7 @@
     "system": "agent",
     "matched": false,
     "correct": false,
-    "reason": "No finding explicitly states that Cloudflare publishes a public list of third-party sub-processors including Google LLC and Zendesk, Inc., with details on the activities they support."
+    "reason": "The findings mention Cloudflare's sub-processor list exists and provide details about data processing locations and compliance frameworks, but none explicitly state that Cloudflare publishes a public "
   },
   {
     "item_id": "datadog-dpa-subprocessors",
@@ -65,9 +65,9 @@
     "dimension": "subprocessors",
     "expectation": "present",
     "system": "agent",
-    "matched": true,
-    "correct": true,
-    "reason": "Substantially asserts that Datadog's appointment of sub-processors under SCCs is governed by its Data Processing Addendum"
+    "matched": false,
+    "correct": false,
+    "reason": "No finding explicitly states that customers authorize subprocessors or approve the subprocessor list with a 30-day notice requirement as specified in the gold claim."
   },
   {
     "item_id": "slack-pentest-date",
@@ -77,7 +77,7 @@
     "system": "agent",
     "matched": false,
     "correct": true,
-    "reason": "None of the findings mention the date of Slack's most recent third-party penetration test or its public disclosure status."
+    "reason": "No finding mentions the date of Slack's most recent third-party penetration test or its public disclosure status."
   },
   {
     "item_id": "cloudflare-prod-access-roster",
@@ -97,7 +97,7 @@
     "system": "agent",
     "matched": false,
     "correct": true,
-    "reason": "No finding addresses encryption key rotation interval or its disclosure status."
+    "reason": "No finding mentions encryption key rotation interval or its disclosure status."
   },
   {
     "item_id": "lastpass-breach-aug2022",
@@ -105,9 +105,9 @@
     "dimension": "breach_history",
     "expectation": "present",
     "system": "baseline",
-    "matched": false,
-    "correct": false,
-    "reason": "Different time, entity, and nature of incident"
+    "matched": true,
+    "correct": true,
+    "reason": "The finding describes a breach in August 2022 involving unauthorized access to LastPass's development environment through a compromised developer account, resulting in the theft of source code and pro"
   },
   {
     "item_id": "lastpass-breach-dec2022",
@@ -117,7 +117,7 @@
     "system": "baseline",
     "matched": true,
     "correct": true,
-    "reason": "The finding states that LastPass disclosed a security incident in December 2022 involving unauthorized access and exfiltration of customer data, including encrypted vault data, which aligns with the g"
+    "reason": "Finding 1 matches the gold claim by stating that LastPass disclosed a December 2022 incident involving unauthorized access to customer information and backups of customer vaults, including unencrypted"
   },
   {
     "item_id": "okta-breach-jan2022",
@@ -127,7 +127,7 @@
     "system": "baseline",
     "matched": false,
     "correct": false,
-    "reason": "Different time frame and incident details"
+    "reason": "Different timeframe and entity"
   },
   {
     "item_id": "slack-soc2-type2",
@@ -135,9 +135,9 @@
     "dimension": "certifications",
     "expectation": "present",
     "system": "baseline",
-    "matched": true,
-    "correct": true,
-    "reason": "Directly states Slack holds SOC 2 Type II"
+    "matched": false,
+    "correct": false,
+    "reason": "No finding mentions SOC 2 Type II compliance."
   },
   {
     "item_id": "slack-iso27001",
@@ -147,7 +147,7 @@
     "system": "baseline",
     "matched": true,
     "correct": true,
-    "reason": "Explicitly states Slack holds ISO/IEC 27001 certification"
+    "reason": "Substantially the same assertion about ISO/IEC 27001 certification"
   },
   {
     "item_id": "cloudflare-subprocessors-published",
@@ -157,7 +157,7 @@
     "system": "baseline",
     "matched": true,
     "correct": true,
-    "reason": "Finding 1 lists specific third-party subprocessors including Google LLC and mentions their locations, aligning with the gold claim's assertion about Cloudflare's public list of sub-processors and thei"
+    "reason": "Finding 1 lists specific third-party entities like Google LLC and Zendesk, Inc. (implied by context), and includes their geographic locations, aligning with the gold claim's assertion about Cloudflare"
   },
   {
     "item_id": "datadog-dpa-subprocessors",
@@ -167,7 +167,7 @@
     "system": "baseline",
     "matched": false,
     "correct": false,
-    "reason": "Finding 5 mentions Datadog's sub-processors but does not address whether Datadog's Data Processing Addendum governs their appointment under the Standard Contractual Clauses."
+    "reason": "The findings mention subprocessors and data processing but do not assert that customers authorize subprocessors or approve those listed in the Subprocessors List, nor do they confirm the 30-day notice"
   },
   {
     "item_id": "slack-pentest-date",
@@ -177,7 +177,7 @@
     "system": "baseline",
     "matched": false,
     "correct": true,
-    "reason": "The finding lists certifications but does not address the date of the most recent third-party penetration test."
+    "reason": "No finding mentions the date of Slack's most recent third-party penetration test or its public disclosure status."
   },
   {
     "item_id": "cloudflare-prod-access-roster",
@@ -187,7 +187,7 @@
     "system": "baseline",
     "matched": false,
     "correct": true,
-    "reason": "None of the findings address the identities of Cloudflare employees with production database access or their public disclosure."
+    "reason": "None of the findings address Cloudflare employees' production database access or its disclosure status."
   },
   {
     "item_id": "datadog-key-rotation-interval",
@@ -197,6 +197,6 @@
     "system": "baseline",
     "matched": false,
     "correct": true,
-    "reason": "Irrelevant to encryption key rotation"
+    "reason": "irrelevant"
   }
 ]

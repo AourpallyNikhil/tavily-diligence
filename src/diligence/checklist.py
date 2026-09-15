@@ -31,6 +31,13 @@ class Dimension:
     # Injected into the writer prompt. Tells the model how to resolve conflicts
     # between sources of different roles within this dimension.
     authority_note: str = ""
+    # Temporal dimensions need dates preserved through passage selection, and
+    # need a bigger budget: a vendor incident page is one long document holding
+    # several dated disclosures, and compressing it to three chunks loses whole
+    # incidents. Certifications and subprocessor lists have no such structure.
+    temporal: bool = False
+    max_chunks: int = 3
+    max_chars: int = 1800
 
 
 CERTIFICATIONS = Dimension(
@@ -90,8 +97,15 @@ BREACH_HISTORY = Dimension(
         "when an independent investigation contradicts it. In particular, "
         "distinguish an incident affecting the VENDOR'S OWN systems from one "
         "affecting CUSTOMER accounts on the vendor's platform -- these are "
-        "different findings with different consequences."
+        "different findings with different consequences.\n"
+        "Passages from temporal sources are prefixed with their section heading "
+        "in square brackets, e.g. [Update as of December 22, 2022]. That heading "
+        "is the date the disclosure belongs to -- use it, and state the date of "
+        "each incident you report. Separate disclosures are separate findings."
     ),
+    temporal=True,
+    max_chunks=5,
+    max_chars=3200,
 )
 
 SUBPROCESSORS = Dimension(
