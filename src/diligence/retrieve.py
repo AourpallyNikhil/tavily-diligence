@@ -109,14 +109,27 @@ class Retriever:
                 eid=f"{dimension.key[:4]}-{len(pool) + 1}",
                 vendor_domain=vendor_domain,
                 keywords=dimension.keywords,
+                rank=len(seen_urls),
             )
             if ev is None:
                 continue
             pool.append(ev)
             stats.tier_counts[ev.tier] = stats.tier_counts.get(ev.tier, 0) + 1
 
-        # Primary sources first, then authoritative, then commentary. The writer
-        # reads in order, so tier order is also context-priority order.
-        pool.sort(key=lambda e: (e.tier, -len(e.matched_keywords)))
+        # The writer reads in order, so this ordering is context priority.
+        #
+        # The previous tiebreak was -len(matched_keywords), which was a mistake
+        # with a measurable cost: keyword density is precisely what SEO content
+        # is optimised to maximise. On a live Snowflake run it ranked marketing
+        # blogs 10th-14th of 21 and the Canadian Centre for Cyber Security
+        # advisory *last*, because the CERT writes sparse factual prose and the
+        # blogs repeat "breach" and "incident" constantly. The ranker rewarded
+        # exactly the sources it should have discounted.
+        #
+        # Keyword overlap is now capped at 3 -- enough to separate an on-topic
+        # page from an off-topic one, not enough for stuffing to dominate -- and
+        # the final tiebreak is Tavily's own relevance rank, which is a real
+        # signal rather than one the source controls.
+        pool.sort(key=lambda e: (e.tier, -min(len(e.matched_keywords), 3), e.rank))
         stats.evidence_kept = len(pool)
         return pool, stats

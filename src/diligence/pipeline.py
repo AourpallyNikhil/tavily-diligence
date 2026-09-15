@@ -79,6 +79,8 @@ class Report:
                             "title": e.title,
                             "tier": e.tier,
                             "tier_label": e.tier_label,
+                            "role": e.role,
+                            "rank": e.rank,
                             "matched_keywords": e.matched_keywords,
                             "raw_chars": e.raw_chars,
                             "selected_chars": e.selected_chars,

@@ -37,6 +37,14 @@ class Finding:
     # Populated by verify.py. None means the verification gate has not run.
     verdicts: dict[str, str] = field(default_factory=dict)
     demoted_reason: str | None = None
+    # Does this claim rest on a source whose ROLE is authoritative for this
+    # dimension? Separate from `status`, because the two can come apart: a claim
+    # can be perfectly entailed by a source that had no business being the
+    # source for it. That gap is what let a marketing blog's framing of the 2024
+    # Snowflake campaign stand beside Mandiant's contradicting it, both marked
+    # supported. Recorded rather than enforced -- see README.
+    provenance_ok: bool = True
+    best_role: str = ""
 
     def to_dict(self) -> dict:
         return {
@@ -46,6 +54,8 @@ class Finding:
             "evidence_ids": list(self.evidence_ids),
             "verdicts": dict(self.verdicts),
             "demoted_reason": self.demoted_reason,
+            "provenance_ok": self.provenance_ok,
+            "best_role": self.best_role,
         }
 
 
@@ -69,6 +79,10 @@ Absolute rules:
    An empty list is a correct and useful answer. Do not pad.
 5. Do not infer. If a passage says a company "underwent an audit", that is not the
    same as "holds SOC 2 Type II certification". State only what is written.
+6. Each passage is tagged with the ROLE of its source. Roles are not decoration:
+   they say who is entitled to be believed about what. Follow the SOURCE AUTHORITY
+   note below when passages disagree, and cite the authoritative source, not the
+   one that states the claim most confidently.
 
 Return ONLY JSON in this shape:
 {"findings": [{"claim": "<one sentence>", "evidence_ids": ["<id>", ...]}]}"""
@@ -127,6 +141,7 @@ def extract_findings(
     user = (
         f"SUBJECT: {subject}\n\n"
         f"QUESTION: {dimension.question}\n\n"
+        f"SOURCE AUTHORITY FOR THIS DIMENSION:\n{dimension.authority_note}\n\n"
         f"EVIDENCE PASSAGES:\n{_render_pool(pool)}\n\n"
         "Return JSON only."
     )
@@ -157,4 +172,30 @@ def extract_findings(
         if isinstance(item, dict) and str(item.get("claim", "")).strip()
     ]
 
-    return enforce_citation_invariant(findings, pool)
+    findings = enforce_citation_invariant(findings, pool)
+    return annotate_provenance(findings, pool, dimension)
+
+
+def annotate_provenance(
+    findings: list[Finding], pool: list[Evidence], dimension: Dimension
+) -> list[Finding]:
+    """Record whether each claim rests on a role that is authoritative here.
+
+    Deliberately NOT a demotion. Status answers "is this claim supported by what
+    it cites"; provenance answers "should that source have been the one to
+    support it". Collapsing them would hide the distinction the Snowflake run
+    exposed, and would silently drop true claims that happen to be derivatively
+    sourced. The eval scores this separately.
+    """
+    by_id = {e.id: e for e in pool}
+    accepted = set(dimension.authoritative_roles)
+    for f in findings:
+        roles = [by_id[i].role for i in f.evidence_ids if i in by_id]
+        if not roles:
+            f.provenance_ok = False
+            f.best_role = ""
+            continue
+        tiers = {by_id[i].role: by_id[i].tier for i in f.evidence_ids if i in by_id}
+        f.best_role = min(roles, key=lambda r: tiers.get(r, 3))
+        f.provenance_ok = any(r in accepted for r in roles)
+    return findings

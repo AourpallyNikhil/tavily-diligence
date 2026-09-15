@@ -48,13 +48,18 @@ vendor
   ▼  Tavily: 2 domain-steered passes + 3 open passes per dimension
   │          include_raw_content, then deterministic passage selection
   │
-  ▼  evidence pool — {id, url, tier, passage, matched_keywords}
+  ▼  evidence pool — {id, url, role, passage, matched_keywords}
+  │     role ∈ vendor-primary | regulator-cert | forensics |
+  │            vuln-registry | press-of-record | derivative
   │
   ▼  writer emits claims, each citing evidence ids
+  │     (given this dimension's source-authority policy)
   │
   ▼  ENFORCED: no resolvable citation ⇒ unverified          (findings.py)
   │
   ▼  ENFORCED: citation must entail the claim ⇒ else unverified  (verify.py)
+  │
+  ▼  RECORDED: is the cited role authoritative here?        (findings.py)
   │
   ▼  findings table
 ```
@@ -76,13 +81,51 @@ This is what stops the system from measuring agreement between two instances of
 the same model's priors. `partial` is a failure, not a pass: "underwent an audit"
 becoming "holds SOC 2 Type II" is precisely the overstatement this exists to catch.
 
-**3. Retrieve wide, then select.** Measured on this workload: Tavily's `content`
+**3. Authority as a role, not a domain allowlist.** The first version asked "is
+this domain trustworthy?" and answered with a 22-entry list. A live Snowflake run
+showed what that costs: Mandiant's forensic report on UNC5537 — the definitive
+account of the 2024 campaign — was tagged `secondary`, because it publishes under
+`cloud.google.com` and the eTLD+1 logic collapsed that to `google.com`. The
+Canadian Centre for Cyber Security advisory was `secondary` too, because the
+`.gov` special case was US-only. Both ranked *below* marketing blogs that got the
+attribution wrong.
+
+The fix is a reframe: **authority is a relation between a source and a claim
+type, not a property of a domain.** Sources are classified into roles
+(`vendor-primary`, `regulator-cert`, `forensics`, `vuln-registry`,
+`press-of-record`, `derivative`) and each dimension declares which roles are
+authoritative *for it*:
+
+| dimension | authoritative | why |
+|---|---|---|
+| certifications | vendor-primary, regulator-cert | the vendor is the authority on its own attestations |
+| subprocessors | vendor-primary | contractual fact; only the vendor can state it |
+| breach history | regulator-cert, forensics, press-of-record, vendor-primary | the vendor is authoritative that an incident *happened* — not on attribution, root cause, or scope |
+
+That last row is the whole point. A vendor is not a neutral party about its own
+culpability, and one global notion of authority cannot express that.
+
+Provenance is **recorded, not enforced**: `status` answers "is this claim
+supported by what it cites," `provenance_ok` answers "should that source have
+been the one to support it." Collapsing them would hide the distinction and
+silently drop true claims that happen to be derivatively sourced.
+
+**4. Retrieve wide, then select.** Measured on this workload: Tavily's `content`
 field averages ~1.3k chars, `include_raw_content` ~17.5k (13.7×). The extra text
 is where the supporting fact usually lives — but five results across three
 dimensions at that size is ~65k tokens of context. So the agent fetches full page
 text and then selects from it, by deterministic keyword scoring rather than
 embeddings. Deterministic because it is reproducible across eval runs,
 explainable (you can see which terms selected a passage), and free.
+
+One trap here, found the hard way. The intra-tier sort tiebreak was originally
+`-len(matched_keywords)` — and keyword density is *exactly* what SEO content is
+optimised to maximise. On the Snowflake run it placed marketing blogs 10th–14th
+of 21 and the Canadian CERT advisory **last**, because the CERT writes sparse
+factual prose while the blogs repeat "breach" and "incident" constantly. The
+ranker rewarded precisely the sources it should have discounted. Keyword overlap
+is now capped at 3, and the final tiebreak is Tavily's own relevance rank — a
+signal the source does not control.
 
 ## Results
 
@@ -270,11 +313,19 @@ Stated because they are real, not to pre-empt criticism.
   industry rather than a failure of our search.
 - **Passage selection is keyword-based.** Embedding-based selection is the obvious
   upgrade and was cut for scope.
-- **The T2 authority tier never fires** (0/145 claims). See Results. Breach
-  history, the dimension most in need of independent corroboration, is 60%
-  sourced from the vendor's own pages.
-- **Coverage is tier-blind.** A primary-source gold item can be satisfied by a
-  Wikipedia citation.
+- **Coverage is still provenance-blind.** The judge scores claim substance, so a
+  primary-source gold item can be satisfied by a Wikipedia citation. Provenance is
+  now measured across all claims, but it is not yet asserted *per gold item* --
+  `gold.yaml` records a `primary_url` for every item that the scorer never reads.
+- **Roles are still a curated prior.** Smaller and more defensible than the
+  allowlist it replaced, but `FORENSICS_PREFIXES` and `PRESS_HOSTS` are lists I
+  wrote. A genuinely authoritative publisher I did not think of is still
+  classified `derivative`. The signals that would generalise -- primary vs
+  derivative publication, independence-weighted corroboration -- are not
+  implemented.
+- **Provenance is recorded, not enforced.** A weakly-sourced claim still renders
+  as supported, marked `~`. Whether it should be demoted is a product decision I
+  did not want to make silently.
 - **Cost.** The agent is ~25× slower than the baseline per vendor. Enforcement is
   not free, and for this use case that is the right trade — but it is a trade.
 

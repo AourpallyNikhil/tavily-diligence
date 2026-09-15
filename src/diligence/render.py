@@ -40,14 +40,18 @@ def render(report: Report, console: Console) -> None:
             )
         for f in result.findings:
             if f.status is Status.SUPPORTED:
-                mark = Text("✓", style="bold green")
+                mark = (
+                    Text("✓", style="bold green")
+                    if f.provenance_ok
+                    else Text("~", style="bold yellow")
+                )
                 claim = Text(f.claim)
                 srcs = Text()
                 for eid in f.evidence_ids:
                     ev = next((e for e in result.pool if e.id == eid), None)
                     if ev is None:
                         continue
-                    srcs.append(f"[{ev.tier_label}] ", style=TIER_STYLE.get(ev.tier, ""))
+                    srcs.append(f"[{ev.role}] ", style=TIER_STYLE.get(ev.tier, ""))
                     srcs.append(f"{ev.url}\n", style="dim")
             else:
                 mark = Text("?", style="bold yellow")
@@ -59,6 +63,7 @@ def render(report: Report, console: Console) -> None:
         console.print()
 
     supported = sum(len(r.supported) for r in report.results)
+    weak = sum(1 for r in report.results for f in r.supported if not f.provenance_ok)
     unverified = sum(len(r.unverified) for r in report.results)
     evidence = sum(len(r.pool) for r in report.results)
 
@@ -66,6 +71,7 @@ def render(report: Report, console: Console) -> None:
     summary.add_column(style="dim")
     summary.add_column()
     summary.add_row("supported", str(supported))
+    summary.add_row("weak provenance", str(weak))
     summary.add_row("unverified", str(unverified))
     summary.add_row("evidence", str(evidence))
     summary.add_row("llm calls", str(report.usage.calls))

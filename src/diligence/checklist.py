@@ -23,6 +23,14 @@ class Dimension:
     # Terms used by the deterministic passage selector to score chunks of page
     # text for relevance. Lowercased substring matching -- see evidence.py.
     keywords: tuple[str, ...] = field(default=())
+    # Which source roles are authoritative FOR THIS CLAIM TYPE. Authority is a
+    # relation between a source and a kind of claim, not a property of a domain:
+    # a vendor is the authority on its own attestations and its own subprocessor
+    # list, and is not a neutral party about its own culpability in a breach.
+    authoritative_roles: tuple[str, ...] = field(default=("vendor-primary",))
+    # Injected into the writer prompt. Tells the model how to resolve conflicts
+    # between sources of different roles within this dimension.
+    authority_note: str = ""
 
 
 CERTIFICATIONS = Dimension(
@@ -44,6 +52,12 @@ CERTIFICATIONS = Dimension(
         "audit report", "trust center", "trust centre", "compliance",
         "pci dss", "hipaa", "csa star",
     ),
+    authoritative_roles=("vendor-primary", "regulator-cert"),
+    authority_note=(
+        "The vendor is the authority on which certifications it holds. Prefer "
+        "vendor-primary sources. A third-party blog asserting that a vendor "
+        "holds a certification is not adequate support for that claim."
+    ),
 )
 
 BREACH_HISTORY = Dimension(
@@ -63,6 +77,20 @@ BREACH_HISTORY = Dimension(
         "unauthorised access", "attacker", "threat actor", "exfiltrat",
         "exposed", "disclosure", "cve-", "vulnerability", "ransomware",
         "phishing", "intrusion", "postmortem", "post-mortem",
+    ),
+    authoritative_roles=("regulator-cert", "forensics", "press-of-record", "vendor-primary"),
+    authority_note=(
+        "Authority splits in this dimension. The vendor is authoritative for "
+        "WHETHER an incident occurred and what it disclosed. The vendor is NOT "
+        "a neutral party on attribution, root cause, or scope -- for those, "
+        "prefer regulator-cert and forensics sources.\n"
+        "When sources disagree about what was compromised or who was at fault, "
+        "follow the regulator-cert or forensics source and state the "
+        "attribution precisely. Do not repeat a derivative source's framing "
+        "when an independent investigation contradicts it. In particular, "
+        "distinguish an incident affecting the VENDOR'S OWN systems from one "
+        "affecting CUSTOMER accounts on the vendor's platform -- these are "
+        "different findings with different consequences."
     ),
 )
 
@@ -84,6 +112,13 @@ SUBPROCESSORS = Dimension(
         "region", "jurisdiction", "gdpr", "dpa", "data processing addendum",
         "standard contractual clauses", "scc", "transfer", "hosted in",
         "eu", "us", "processor",
+    ),
+    authoritative_roles=("vendor-primary",),
+    authority_note=(
+        "Only the vendor can state who its subprocessors are and where it "
+        "processes data -- this is contractual fact, not reporting. Use "
+        "vendor-primary sources. A third party's list naming this vendor is "
+        "evidence about THAT party, not about this one."
     ),
 )
 

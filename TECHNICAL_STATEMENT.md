@@ -62,12 +62,17 @@ SOC 2 Type II" is exactly the overstatement the gate exists to catch.
 **Retrieve wide, then select.** This one came out of measurement, not planning —
 see below.
 
+**Authority as a role.** Each dimension declares which source roles are
+authoritative for it, and every claim records whether it rests on one. Not a
+demotion — a separate axis, because a claim can be perfectly entailed by a source
+that had no business being the source for it.
+
 Control flow is a fixed pipeline, not an agent loop. That is a deliberate
 inversion of the starter. Autonomy is right for open-ended research and wrong for
 a compliance artefact: a report that takes a different path every run cannot be
 audited, diffed, or evaluated against a fixed question set.
 
-## Two things I got wrong
+## Three things I got wrong
 
 Both are in the git history and the session log. They are the most useful part of
 this submission.
@@ -96,6 +101,51 @@ vendor. Withholding the subject bought nothing (the citation invariant and the
 gate are what stop memory-answering) and cost correctness. **Groundedness is not
 relevance, and they need separate mechanisms.** The fix was to pass the subject
 and add an explicit relevance rule, plus a second domain-steered retrieval pass.
+
+**I modelled authority as a domain allowlist, and it inverted the ranking.** The
+first version of `classify_tier` asked "is this domain trustworthy?" and answered
+with 22 hardcoded entries. Running the finished agent by hand on Snowflake — a
+vendor deliberately not in the eval set — exposed what that costs.
+
+The 2024 Snowflake campaign is a contested-attribution case: customer accounts
+without MFA were compromised via credential stuffing; Snowflake's own systems were
+not breached. The agent surfaced both framings and marked both `supported`:
+
+> ✓ *"Snowflake experienced a security incident … attackers compromised hundreds
+> of organizations using Snowflake's cloud data platform"* — `nightfall.ai`
+> ✓ *"Mandiant's investigation has not found any evidence to suggest that
+> unauthorized access to Snowflake customer accounts stemmed from a breach of
+> Snowflake's enterprise environment"* — `cloud.google.com`
+
+Every claim was faithful to its source. The *set* was incoherent. And the reason
+the wrong framing outranked the right one was structural, in three places:
+
+1. `cloud.google.com` — where Mandiant publishes post-acquisition — collapsed to
+   `google.com` under my eTLD+1 logic and fell through to `derivative`.
+2. `cyber.gc.ca` and `ncsc.gov.uk` fell through too, because the `.gov` special
+   case was US-only. Every non-US national CERT was invisible.
+3. The intra-tier sort tiebreak was `-len(matched_keywords)`. Keyword density is
+   what SEO content is built to maximise, so the ranker actively promoted content
+   farms and buried the Canadian CERT advisory at position 21 of 21 for writing
+   sparse factual prose.
+
+None of that is fixable by prompting: the labels themselves were wrong, so even a
+perfect "prefer authoritative sources" instruction would have faithfully applied a
+mislabeled pool.
+
+The fix is a reframe. **Authority is a relation between a source and a claim type,
+not a property of a domain.** Sources now carry a *role*, and each dimension
+declares which roles are authoritative for it — the vendor is the authority on its
+own certifications and subprocessor list, and is explicitly *not* a neutral party
+on attribution or root cause in its own breach. Provenance is recorded alongside
+status rather than folded into it, because "is this claim supported by what it
+cites" and "should that source have been the one to support it" are different
+questions.
+
+The honest limit: this still needs a prior about who is accountable. The
+difference is that a per-dimension role policy is a small, defensible, auditable
+prior, where a 22-domain allowlist was an undefended guess that silently
+classified everything I had not thought of as junk.
 
 ## Evaluation
 

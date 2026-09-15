@@ -10,18 +10,25 @@ these three properties are the product:
 
 from __future__ import annotations
 
-from diligence.evidence import Evidence, classify_tier, select_passages
-from diligence.findings import Finding, Status, enforce_citation_invariant
+from diligence.checklist import BREACH_HISTORY, SUBPROCESSORS
+from diligence.evidence import Evidence, Role, classify_role, classify_tier, select_passages
+from diligence.findings import (
+    Finding,
+    Status,
+    annotate_provenance,
+    enforce_citation_invariant,
+)
 from diligence.verify import verify_findings
 
 
-def ev(eid: str, passage: str = "text", tier: int = 1) -> Evidence:
+def ev(eid: str, passage: str = "text", tier: int = 1, role: str = "vendor-primary") -> Evidence:
     return Evidence(
         id=eid,
         url=f"https://example.com/{eid}",
         title=eid,
         domain="example.com",
         tier=tier,
+        role=role,
         passage=passage,
     )
 
@@ -128,6 +135,63 @@ class TestVerificationGate:
         assert stub.calls == 0
 
 
+class TestRoles:
+    def test_forensics_under_parent_company_domain(self):
+        # Mandiant publishes under cloud.google.com since the acquisition. The
+        # first version collapsed this to google.com and tagged it derivative.
+        u = "https://cloud.google.com/blog/topics/threat-intelligence/unc5537-snowflake"
+        assert classify_role(u, "snowflake.com") is Role.FORENSICS
+        assert classify_tier(u, "snowflake.com") == 2
+
+    def test_google_outside_threat_intel_path_is_not_forensics(self):
+        assert classify_role("https://cloud.google.com/pricing", "acme.com") is Role.DERIVATIVE
+
+    def test_non_us_cert_is_regulator(self):
+        # .gov special-casing was US-only; these all fell through to derivative.
+        for u in (
+            "https://www.cyber.gc.ca/en/alerts-advisories/x",
+            "https://www.ncsc.gov.uk/news/y",
+            "https://www.cyber.gov.au/about-us/alerts/z",
+        ):
+            assert classify_role(u, "acme.com") is Role.REGULATOR, u
+
+    def test_marketing_blog_is_derivative(self):
+        assert classify_role("https://www.nightfall.ai/blog/x", "acme.com") is Role.DERIVATIVE
+
+    def test_press_of_record(self):
+        assert classify_role("https://krebsonsecurity.com/2024/06/x", "acme.com") is Role.PRESS
+
+
+class TestProvenance:
+    def test_derivative_source_fails_provenance_for_subprocessors(self):
+        pool = [ev("subp-1", role="derivative", tier=3)]
+        f = finding("Acme uses AWS as a subprocessor.", ["subp-1"])
+        f.dimension = "subprocessors"
+        out = annotate_provenance([f], pool, SUBPROCESSORS)
+        assert out[0].provenance_ok is False
+
+    def test_vendor_source_passes_provenance_for_subprocessors(self):
+        pool = [ev("subp-1", role="vendor-primary", tier=1)]
+        f = finding("Acme uses AWS as a subprocessor.", ["subp-1"])
+        out = annotate_provenance([f], pool, SUBPROCESSORS)
+        assert out[0].provenance_ok is True
+
+    def test_forensics_passes_provenance_for_breach_history(self):
+        pool = [ev("brea-1", role="forensics", tier=2)]
+        f = finding("Root cause was compromised customer credentials.", ["brea-1"])
+        out = annotate_provenance([f], pool, BREACH_HISTORY)
+        assert out[0].provenance_ok is True
+
+    def test_provenance_is_not_a_demotion(self):
+        # A weakly-sourced claim stays `supported`. Status and provenance are
+        # different questions and collapsing them hides the distinction.
+        pool = [ev("subp-1", role="derivative", tier=3)]
+        f = finding("Acme uses AWS.", ["subp-1"])
+        out = annotate_provenance([f], pool, SUBPROCESSORS)
+        assert out[0].status is Status.SUPPORTED
+        assert out[0].provenance_ok is False
+
+
 class TestTiering:
     def test_vendor_domain_is_tier_1(self):
         assert classify_tier("https://www.datadoghq.com/security/", "datadoghq.com") == 1
@@ -138,10 +202,13 @@ class TestTiering:
     def test_registry_is_tier_2(self):
         assert classify_tier("https://nvd.nist.gov/vuln/detail/CVE-2024-1", "acme.com") == 2
 
+    def test_derivative_blog_is_tier_3(self):
+        assert classify_tier("https://www.nightfall.ai/blog/x", "acme.com") == 3
+
     def test_gov_is_tier_2(self):
         assert classify_tier("https://www.cisa.gov/advisory", "acme.com") == 2
 
-    def test_blog_is_tier_3(self):
+    def test_unknown_domain_is_tier_3(self):
         assert classify_tier("https://someblog.example/post", "acme.com") == 3
 
 

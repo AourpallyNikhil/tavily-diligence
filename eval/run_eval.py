@@ -1,13 +1,21 @@
 """Evaluation harness.
 
-Reports four things, each measured by a method that can actually measure it:
+Reports five things, each measured by a method that can actually measure it:
 
   coverage            (positive seed items)  did the system establish the fact?
   abstention accuracy (negative seed items)  did it refrain from asserting a
                                              fact that is not publicly disclosed?
   citation precision  (all emitted claims)   is a claim presented as supported
                                              actually entailed by its citation?
+  provenance          (all emitted claims)   is the cited source one that is
+                                             authoritative for THIS claim type?
   cost                (traces)               latency, tokens, calls
+
+Provenance is separate from precision on purpose. Precision asks whether a source
+supports the claim made from it; provenance asks whether that source should have
+been the one consulted. A marketing blog accurately stating its own wrong framing
+scores perfectly on precision and badly on provenance -- which is exactly the
+failure a live Snowflake run exposed.
 
 A note on citation precision, stated plainly because it would otherwise be
 misleading: for this pipeline it is ~1.0 *by construction*, since the gate demotes
@@ -38,6 +46,8 @@ sys.path.insert(0, str(ROOT / "eval"))
 
 from baseline import run_baseline  # noqa: E402
 from diligence.config import Config  # noqa: E402
+from diligence.checklist import BY_KEY  # noqa: E402
+from diligence.evidence import classify_role  # noqa: E402
 from diligence.findings import Status  # noqa: E402
 from diligence.llm import LLM  # noqa: E402
 from diligence.pipeline import run_diligence  # noqa: E402
@@ -85,6 +95,7 @@ class SystemTotals:
     claims_emitted: int = 0
     claims_presented_supported: int = 0
     claims_entailed: int = 0
+    claims_authoritative: int = 0
     elapsed_s: float = 0.0
     prompt_tokens: int = 0
     completion_tokens: int = 0
@@ -248,6 +259,7 @@ def main(
                 if f["status"] != Status.SUPPORTED.value:
                     continue
                 agent.claims_presented_supported += 1
+                agent.claims_authoritative += int(f.get("provenance_ok", False))
                 # Post-gate entailment is true by construction; recorded for the
                 # human-labelling file so the judge itself can be audited.
                 for eid in f["evidence_ids"]:
@@ -269,9 +281,14 @@ def main(
 
     for vendor, rep in baseline_reports.items():
         seen = rep.get("sources_seen", {})
+        vdom = next((d for v, d in vendors.items() if v == vendor), None)
         for f in rep["findings"]:
             base.claims_emitted += 1
             base.claims_presented_supported += 1
+            accepted = set(BY_KEY[f["dimension"]].authoritative_roles)
+            base.claims_authoritative += int(
+                any(classify_role(u, vdom).value in accepted for u in f["sources"])
+            )
             ok = False
             for url in f["sources"]:
                 text = seen.get(url, "")
@@ -302,6 +319,8 @@ def main(
          str(base.claims_presented_supported)),
         ("of those, entailed by citation", agent.pct(agent.claims_entailed, agent.claims_presented_supported),
          base.pct(base.claims_entailed, base.claims_presented_supported)),
+        ("of those, on an authoritative source", agent.pct(agent.claims_authoritative, agent.claims_presented_supported),
+         base.pct(base.claims_authoritative, base.claims_presented_supported)),
         ("claims emitted before gating", str(agent.claims_emitted), str(base.claims_emitted)),
         ("gate yield (removed)", agent.pct(agent.claims_emitted - agent.claims_presented_supported, agent.claims_emitted), "n/a"),
         ("total elapsed", f"{agent.elapsed_s:.0f}s", f"{base.elapsed_s:.0f}s"),
